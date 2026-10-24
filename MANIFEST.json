@@ -34,12 +34,21 @@
       "adapted": true,
       "mode": "0644",
       "original_sha256": "96bb8c7b0d8428a3bd81271c4ecb49cac68196dd513b722aac4be0efdbc9e615",
-      "sha256": "e75a841e987607662eec3f39273bece88e90fe948d83b3c2fb8422868af475c5",
-      "size": 19544,
+      "sha256": "455059fb71b459c6d1cf28146e4fc1b2fd645fd253060268ac29d36219840b29",
+      "size": 22636,
       "source": {
         "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
         "path": "agents/shared/portable/README.md",
         "repository": "YoheiOhto/env"
+      }
+    },
+    "docs/mizuno-lab.md": {
+      "mode": "0644",
+      "sha256": "4d4e9b18eb64cee80e113583478970ee430a56701bf148e46b55d2528cf7be62",
+      "size": 15026,
+      "source": {
+        "kind": "first-party",
+        "repository": "YoheiOhto/research-agent-kit"
       }
     },
     "hooks/invocation_counts.py": {
@@ -63,13 +72,24 @@
       }
     },
     "rules/RULES.md": {
+      "adapted": true,
       "mode": "0644",
-      "sha256": "30261b313d71245fe8d734e49ea9b9f289b6e28441cc4e993e0601f9f0cefec8",
-      "size": 4255,
+      "original_sha256": "30261b313d71245fe8d734e49ea9b9f289b6e28441cc4e993e0601f9f0cefec8",
+      "sha256": "23ef2474009f0cd92c9df938df09a46cc2f4c51e47894d50873662c0d9a5a477",
+      "size": 4786,
       "source": {
         "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
         "path": "agents/shared/portable/RULES.md",
         "repository": "YoheiOhto/env"
+      }
+    },
+    "rules/git.md": {
+      "mode": "0644",
+      "sha256": "5988661a0b7a1ecfb0a04fe4435b282e6506e75dbc5482cbda587e90174358c0",
+      "size": 2338,
+      "source": {
+        "kind": "first-party",
+        "repository": "YoheiOhto/research-agent-kit"
       }
     },
     "skills/biopython/LICENSE": {
@@ -609,6 +629,28 @@
       "source": {
         "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
         "path": "agents/shared/skills/gget/scripts/gene_analysis.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/git-workflow/LICENSE": {
+      "mode": "0644",
+      "sha256": "b30fc237610468e11ec516f1853f763c089e04a12842c4963f8b161ce449c7c9",
+      "size": 1066,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "LICENSE",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/git-workflow/SKILL.md": {
+      "adapted": true,
+      "mode": "0644",
+      "original_sha256": "b0de76375369c0df3fca5027b176a21b3ae51c7a7716f1cddacbb7f09d4e9af7",
+      "sha256": "2402541b8ad8cce9ecf06e6267119dc261069050896233d8a9b86a307571512d",
+      "size": 7082,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/git-workflow/SKILL.md",
         "repository": "YoheiOhto/env"
       }
     },
@@ -1332,10 +1374,19 @@
         "repository": "YoheiOhto/env"
       }
     },
+    "templates/experiment-plan.yml": {
+      "mode": "0644",
+      "sha256": "7f7200e6998237d7ada31bc65bdaf1f9cf7ed21d8d5012f51170267ec6bef760",
+      "size": 4809,
+      "source": {
+        "kind": "first-party",
+        "repository": "YoheiOhto/research-agent-kit"
+      }
+    },
     "tests/test_distribution.py": {
       "mode": "0644",
-      "sha256": "f7187badacf5e51a812ddda43665736e31c3ec45ea0f05b5300ad3983f220c16",
-      "size": 10971,
+      "sha256": "fd2996feb5d1051fc517ec6d35d0caf9e88f0d51ae8c209d3eabd19af0568587",
+      "size": 11239,
       "source": {
         "kind": "first-party",
         "repository": "YoheiOhto/research-agent-kit"
@@ -1393,8 +1444,10 @@
     }
   },
   "first_party_skills": [
-    "research-workflow"
+    "research-workflow",
+    "git-workflow"
   ],
+  "primary_audience": "mizuno-lab",
   "schema_version": 1,
   "skills": [
     "biopython",
@@ -1405,9 +1458,18 @@
     "statistical-analysis",
     "statistical-power",
     "yomiyasu",
-    "research-workflow"
+    "research-workflow",
+    "git-workflow"
   ],
   "upstream_snapshot": {
+    "additional_sources": [
+      "agents/shared/skills/git-workflow/SKILL.md",
+      "agents/shared/claude/git.md",
+      "agents/README.md",
+      "agents/shared/instructions/core.md",
+      "docs/environment_tools.md",
+      "docs/experiment_planning.md"
+    ],
     "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
     "exporter": "tools/agents/agent_snapshot.py",
     "repository": "https://github.com/YoheiOhto/env"
