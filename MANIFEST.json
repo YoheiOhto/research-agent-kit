@@ -34,8 +34,8 @@
       "adapted": true,
       "mode": "0644",
       "original_sha256": "96bb8c7b0d8428a3bd81271c4ecb49cac68196dd513b722aac4be0efdbc9e615",
-      "sha256": "455059fb71b459c6d1cf28146e4fc1b2fd645fd253060268ac29d36219840b29",
-      "size": 22636,
+      "sha256": "8fd0fe950e6a2b2178a88ae465252eac33813457beeff9fb691c241c1f5ac44f",
+      "size": 25309,
       "source": {
         "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
         "path": "agents/shared/portable/README.md",
@@ -44,8 +44,8 @@
     },
     "docs/mizuno-lab.md": {
       "mode": "0644",
-      "sha256": "4d4e9b18eb64cee80e113583478970ee430a56701bf148e46b55d2528cf7be62",
-      "size": 15026,
+      "sha256": "64beb752ae44e259e4d036ef05dd01c94f664333a6e66e5d6fc0555961a689d8",
+      "size": 21656,
       "source": {
         "kind": "first-party",
         "repository": "YoheiOhto/research-agent-kit"
@@ -522,6 +522,28 @@
         "repository": "YoheiOhto/env"
       }
     },
+    "skills/find-existing/LICENSE": {
+      "mode": "0644",
+      "sha256": "b30fc237610468e11ec516f1853f763c089e04a12842c4963f8b161ce449c7c9",
+      "size": 1066,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "LICENSE",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/find-existing/SKILL.md": {
+      "adapted": true,
+      "mode": "0644",
+      "original_sha256": "7fd3fa141c05aed757c7477a9e0599cae33a1e5a567708afd61843842f6476cf",
+      "sha256": "53b6a4e80b27fd31bd990606f15c1f34955323b75e778619e2cdfde5af2e6d83",
+      "size": 2835,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/find-existing/SKILL.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
     "skills/gget/LICENSE": {
       "mode": "0644",
       "sha256": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
@@ -651,6 +673,50 @@
       "source": {
         "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
         "path": "agents/shared/skills/git-workflow/SKILL.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/preempt/LICENSE": {
+      "mode": "0644",
+      "sha256": "b30fc237610468e11ec516f1853f763c089e04a12842c4963f8b161ce449c7c9",
+      "size": 1066,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "LICENSE",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/preempt/SKILL.md": {
+      "adapted": true,
+      "mode": "0644",
+      "original_sha256": "eabac5acaa3be89430e8834b3d91767ca5874706ca1b6f727f06c6deb974c171",
+      "sha256": "39aa5934b1c506bfb536827222cdad46c3b85793507f5d3a4a08e7793115d7e1",
+      "size": 5318,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/preempt/SKILL.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/research-review/LICENSE": {
+      "mode": "0644",
+      "sha256": "b30fc237610468e11ec516f1853f763c089e04a12842c4963f8b161ce449c7c9",
+      "size": 1066,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "LICENSE",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/research-review/SKILL.md": {
+      "adapted": true,
+      "mode": "0644",
+      "original_sha256": "e75238cb4c72fb5a1db106260f608e65eaa46a5fb90a2aa0d5724785584a8a08",
+      "sha256": "992994091bf6fc025befd099d5ee24bcfcc770dd0332808d17a3bb325afa4123",
+      "size": 4404,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/research-review/SKILL.md",
         "repository": "YoheiOhto/env"
       }
     },
@@ -1374,10 +1440,73 @@
         "repository": "YoheiOhto/env"
       }
     },
-    "templates/experiment-plan.yml": {
+    "templates/experiment-plan.md": {
+      "adapted": true,
       "mode": "0644",
+      "original_sha256": "4847e30f7e57b422fcb884a3b62f410bed69ed1ba1ad82f5e27c3e444b0d9663",
+      "sha256": "1a08456c0b4b7db1b31382ad0ef4401c2f0087f611ddc477008c5b014c0b2ab6",
+      "size": 6356,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/plan-next-experiment/assets/plan.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "templates/experiment-plan.yml": {
+      "adapted": true,
+      "mode": "0644",
+      "original_sha256": "7118f2ac5dd11dd76176c6a66cec9d12fcd9457608ffce7c01d8d54dca558a1f",
       "sha256": "7f7200e6998237d7ada31bc65bdaf1f9cf7ed21d8d5012f51170267ec6bef760",
       "size": 4809,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": ".github/ISSUE_TEMPLATE/experiment-plan.yml",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "templates/project-AGENTS.md": {
+      "mode": "0644",
+      "sha256": "12bd3228235e598fc40f97bee2c56944e23d02cca320728057010fce1d1df895",
+      "size": 3250,
+      "source": {
+        "kind": "first-party",
+        "repository": "YoheiOhto/research-agent-kit"
+      }
+    },
+    "templates/project-CLAUDE.md": {
+      "mode": "0644",
+      "sha256": "2dfada95a0eb00239f7e96e2cad8c1cbb31f60fa5bb0566c48b704bc7734aecd",
+      "size": 758,
+      "source": {
+        "kind": "first-party",
+        "repository": "YoheiOhto/research-agent-kit"
+      }
+    },
+    "templates/remote-handoff.md": {
+      "adapted": true,
+      "mode": "0644",
+      "original_sha256": "e04bd9c54d71949765a56214f80a42e03c6a8ff45945c9ecee3bf62d3de9b879",
+      "sha256": "d3d669e3bf7f6ef03e5ace4f68de22d84ee83c901fdfa3ad3f62264fb770a50d",
+      "size": 2375,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/remote-experiment/templates/remote-handoff.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "templates/result-summary.md": {
+      "mode": "0644",
+      "sha256": "a067e9dc58243944ff889454c6e177bad2a8fa351e289bf3aae6b9adcce87a99",
+      "size": 2216,
+      "source": {
+        "kind": "first-party",
+        "repository": "YoheiOhto/research-agent-kit"
+      }
+    },
+    "templates/storage-policy.md": {
+      "mode": "0644",
+      "sha256": "145c6dc8195d23f70190910b488231ae49997498ed76b7dacaa214aac1f293b2",
+      "size": 2449,
       "source": {
         "kind": "first-party",
         "repository": "YoheiOhto/research-agent-kit"
@@ -1385,8 +1514,8 @@
     },
     "tests/test_distribution.py": {
       "mode": "0644",
-      "sha256": "fd2996feb5d1051fc517ec6d35d0caf9e88f0d51ae8c209d3eabd19af0568587",
-      "size": 11239,
+      "sha256": "856a7733c1ad40636286eecc65206a209baa466ca5cb6065bda24659718931b3",
+      "size": 11286,
       "source": {
         "kind": "first-party",
         "repository": "YoheiOhto/research-agent-kit"
@@ -1445,7 +1574,10 @@
   },
   "first_party_skills": [
     "research-workflow",
-    "git-workflow"
+    "git-workflow",
+    "find-existing",
+    "research-review",
+    "preempt"
   ],
   "primary_audience": "mizuno-lab",
   "schema_version": 1,
@@ -1459,16 +1591,21 @@
     "statistical-power",
     "yomiyasu",
     "research-workflow",
-    "git-workflow"
+    "git-workflow",
+    "find-existing",
+    "research-review",
+    "preempt"
   ],
   "upstream_snapshot": {
     "additional_sources": [
-      "agents/shared/skills/git-workflow/SKILL.md",
       "agents/shared/claude/git.md",
       "agents/README.md",
       "agents/shared/instructions/core.md",
       "docs/environment_tools.md",
-      "docs/experiment_planning.md"
+      "docs/experiment_planning.md",
+      "agents/shared/skills/debug-experiment/SKILL.md",
+      "agents/shared/skills/resource-planning/SKILL.md",
+      "agents/shared/skills/remote-experiment/SKILL.md"
     ],
     "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
     "exporter": "tools/agents/agent_snapshot.py",

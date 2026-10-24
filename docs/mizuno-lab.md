@@ -129,8 +129,59 @@ textのmodel判定では実行機上のmodel・runtimeの入力容量を確認�
 
 最初はkitのテストと読取り点検、採用するskill・rulesの差分から確認します。env側の`sync_env --dry-run`は予定差分の確認、`--apply`は稼働設定の変更です。実機agent・認証・scheduler・通知・cronの検証を、それぞれ別に扱います。設定ファイルの存在やテスト成功だけで、導入先の全機能が起動したとは報告しません。
 
-## 9. 原本と変更の追跡
+## 9. 貼って使うひな形とskillの選択
 
-Git運用の原本はenvの`agents/shared/skills/git-workflow/SKILL.md`と`agents/shared/claude/git.md`、研究・出力・通知の原本は同じenvの`agents/shared/instructions/`、`agents/README.md`、`docs/environment_tools.md`等です。採用元のcommitと共有版での調整は本repoのMANIFESTとGit履歴に残します。
+ひな形は必要な部分だけを既存の指示・plan・結果へ統合します。全ファイルを毎回コピーせず、未記入の草案を実行設定や承認記録にしません。
+
+| 場面 | 使うもの |
+|---|---|
+| 既存AGENTS.md／CLAUDE.mdへ指示を加える | [AGENTS例](../templates/project-AGENTS.md)・[Claude入口例](../templates/project-CLAUDE.md)。kitの絶対パスと本人用の実行・Git・保存条件を確認して統合 |
+| 新しい研究の条件を相談する | `research-workflow`と[planひな形](../templates/experiment-plan.md)・[Issue Form](../templates/experiment-plan.yml)。未承認・未確定のまま実装しない |
+| 実装の前に似たcodeを探す | [find-existing](../skills/find-existing/SKILL.md)。探した範囲と再利用候補を返し、未発見を不存在と扱わない |
+| 研究codeの正しさを読む | [research-review](../skills/research-review/SKILL.md)。既定は差分reviewで、修正・新しい分析・再実行を自動で始めない |
+| 長時間処理の途中保存・再開を設計する | [preempt](../skills/preempt/SKILL.md)。保存状態・入力と設定の同一性・重複しない再開・軽い合成確認を扱う |
+| 結果と図を残す | [結果サマリー](../templates/result-summary.md)。未確認の結果や画像をreview済みと書かない |
+| 出力増加を抑える | [保持方針](../templates/storage-policy.md)。集約単位・必要なcheckpoint・保持根拠・枠を合意し、容量だけを理由に証拠を捨てない |
+| 別の計算機へ引き継ぐ | [引継ぎひな形](../templates/remote-handoff.md)。移設先・承認・identity・分担・照合を記録 |
+
+元envの`autoresearch`・`autonomous-experiment`・`debug-experiment`・`review-exp`・`standup`・`roadmap`・`research-reporting`等の専用skillとCLIは、このkitへ一括では入れていません。計画・review・報告の原則は同梱workflowとこの案内で使い、scheduler・queue・実績回収等を接続する場合は、そのenvの実装と導入状態を別途確認します。skill名を知っていることは実装の存在や実行許可の証拠ではありません。
+
+## 10. 失敗時は分類してから対処する
+
+対象のrun/job IDから実際のcommand・設定・終了状態と必要なログ部分を辿ります。可変の`latest`や他の担当のログを取り違えず、全文・全実験の一括収集を避けます。
+
+| 分類 | 確認する証拠 | 対処の境界 |
+|---|---|---|
+| OOM | RAM／VRAMのどちらか、終了状態、対象設定と使用量 | 条件を保つ修正と、既存方針内の資源調整。batch・精度・系列長の無断変更や、同等性不明のchunk変更はしない |
+| timeout | 進捗があったか、どの単位まで保存できたか | 進捗と同一性に根拠がある再開を検討。停止していた処理を時間だけ増やして再投入しない |
+| code／config | traceback、承認planと実設定の不一致 | 必要な修正だけを承認済み条件へ合わせる。失敗が見えなくなるだけの除外や基準変更をしない |
+| environment | 依存・container・mount・architecture・認証の実状態 | 必要な変更を示す。依存導入や共有環境の修理は別途承認 |
+| data | 対象入力の欠損・破損・identity違い | 元入力を推測で修正せず、影響と不足を報告して依存処理を止める |
+| node障害 | schedulerの障害記録と保存済み状態 | 原因・互換性と既存承認を確認する。共有設定や他人のjobを修理しない |
+| unknown | 確認できた範囲と未解決点 | 推測の修正・再投入をしない。独立した読取りや合成確認を進める |
+
+再投入前は残る承認範囲・条件・利用量・期限・holdと、重複した実行がないことを確認します。この表自体が修正・投入の許可や新しい実験条件にはなりません。完了済み結果を消して再実行guardを迂回しません。
+
+## 11. 資源見積もりの根拠を残す
+
+近いmodel・入力規模・長さ・batch・精度・処理の過去jobを先に見ます。RAMは対象stepの使用量、VRAMはframework等の観測を使い、SlurmのMaxRSSやhost RAMからVRAMを推定しません。既知のqueue容量を、実際のworkload使用量と混同しません。
+
+worker数と数値libraryのthread数を合わせて見て、schedulerの割当CPUと実測のpeak RAM・I/Oの余裕に収めます。物理core数や空きGPUだけを根拠に並列・API要求を増やしません。入力を何度も全読込みせず、検証済み前処理の再利用、streaming、上限付きqueueを検討します。
+
+所要時間は「queue待ち＋転送＋環境準備＋残件／同条件の実測速度＋回収」で見積もります。待ち時間・条件差・保存のoverheadは不確実性として示し、要求値・推奨値・根拠と確度を分けます。ここに架空の測定値や班全体の固定余裕率は設定しません。
+
+証拠がなければ最小の代表probeを提案し、その実データ処理・投入は承認を受けてから行います。終了後のjob ID、workload identity、要求資源、elapsed、RAM、観測できたVRAM、状態・終了codeを次の見積もりの根拠にします。
+
+## 12. 別計算機への引継ぎ
+
+[引継ぎひな形](../templates/remote-handoff.md)で、CPU architecture・container・依存、共有mountとscratch、正規の出力先、容量・quotaを確認します。code・入力・model・設定の固定IDを照合し、hardware差が結果に影響する場合は承認済みの同等性基準を使います。
+
+担当taskを明示して重複・欠落を調べ、実行中taskの所有権を勝手に移しません。回収はwriterが確定してから元と照合し、既存結果の上書きやscratch削除を一括で承認されたものとしません。別cluster・実転送・投入・環境変更・取消・削除は、それぞれ既存承認の範囲を確認します。
+
+このkitはSSH設定・秘密鍵・実データ・転送／削除スクリプトを配布しません。引継ぎ文書だけで移設制御、停止確認、quota制限や科学的同等性が実装されたとは扱いません。
+
+## 13. 原本と変更の追跡
+
+Git運用の原本はenvの`agents/shared/skills/git-workflow/SKILL.md`と`agents/shared/claude/git.md`、研究・出力・通知の原本は同じenvの`agents/shared/instructions/`、`agents/README.md`、`docs/environment_tools.md`等です。探索・研究review・再開は対応する元skill、ひな形と切り分け表は計画・遠隔実験・debug・資源計画の原本を参照しています。採用元のcommitと共有版での調整は本repoのMANIFESTとGit履歴に残します。
 
 共有のために個人envの全履歴・inventory・認証情報をコピーする必要はありません。班に必要な運用を文書とskillへ移し、実行コードの追加は本人用設定への対応と検証を済ませた範囲で行います。

@@ -17,7 +17,7 @@ IMPORTED = {
     'biopython', 'experimental-design', 'exploratory-data-analysis', 'gget',
     'scikit-learn', 'statistical-analysis', 'statistical-power', 'yomiyasu',
 }
-FIRST_PARTY = {'research-workflow', 'git-workflow'}
+FIRST_PARTY = {'research-workflow', 'git-workflow', 'find-existing', 'research-review', 'preempt'}
 
 
 class DistributionTests(unittest.TestCase):
