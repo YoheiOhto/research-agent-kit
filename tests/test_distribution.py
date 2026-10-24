@@ -43,7 +43,12 @@ class DistributionTests(unittest.TestCase):
                 data = (ROOT / name).read_bytes()
                 self.assertEqual(hashlib.sha256(data).hexdigest(), record['sha256'])
                 self.assertEqual(len(data), record['size'])
-                self.assertEqual(stat.S_IMODE((ROOT / name).stat().st_mode), int(record['mode'], 8))
+                mode = stat.S_IMODE((ROOT / name).stat().st_mode)
+                self.assertEqual(mode & 0o7000, 0, 'special permission bits are unexpected')
+                self.assertIn(record['mode'], {'0644', '0755'})
+                # Git preserves the executable bit; clone permissions vary with umask.
+                git_mode = '0755' if mode & stat.S_IXUSR else '0644'
+                self.assertEqual(git_mode, record['mode'])
 
     def test_imported_skill_provenance_and_licenses(self):
         self.assertEqual({p.name for p in (ROOT / 'skills').iterdir()}, IMPORTED | {'research-workflow'})
