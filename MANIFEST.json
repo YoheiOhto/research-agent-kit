@@ -34,8 +34,8 @@
       "adapted": true,
       "mode": "0644",
       "original_sha256": "96bb8c7b0d8428a3bd81271c4ecb49cac68196dd513b722aac4be0efdbc9e615",
-      "sha256": "8fd0fe950e6a2b2178a88ae465252eac33813457beeff9fb691c241c1f5ac44f",
-      "size": 25309,
+      "sha256": "a487cd1faa03684679b8488143cb7e7b116aaedb5926100bd25f68898db83e41",
+      "size": 28449,
       "source": {
         "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
         "path": "agents/shared/portable/README.md",
@@ -44,8 +44,8 @@
     },
     "docs/mizuno-lab.md": {
       "mode": "0644",
-      "sha256": "64beb752ae44e259e4d036ef05dd01c94f664333a6e66e5d6fc0555961a689d8",
-      "size": 21656,
+      "sha256": "daaa5243de5a374b941105d25d769df4c1204c8af6d2986aa89c25cb18b9c99a",
+      "size": 22578,
       "source": {
         "kind": "first-party",
         "repository": "YoheiOhto/research-agent-kit"
@@ -75,8 +75,8 @@
       "adapted": true,
       "mode": "0644",
       "original_sha256": "30261b313d71245fe8d734e49ea9b9f289b6e28441cc4e993e0601f9f0cefec8",
-      "sha256": "23ef2474009f0cd92c9df938df09a46cc2f4c51e47894d50873662c0d9a5a477",
-      "size": 4786,
+      "sha256": "570e22367204e6afed981102153eed084c548e93cdfed6b9d616a45b407fef63",
+      "size": 5147,
       "source": {
         "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
         "path": "agents/shared/portable/RULES.md",
@@ -731,9 +731,11 @@
       }
     },
     "skills/research-workflow/SKILL.md": {
+      "adapted": true,
       "mode": "0644",
-      "sha256": "e91294bd85a4c904bc91a270fc131a357713147ff61cc48fd122acaf0c8e9c3a",
-      "size": 7260,
+      "original_sha256": "e91294bd85a4c904bc91a270fc131a357713147ff61cc48fd122acaf0c8e9c3a",
+      "sha256": "0bca87a00b4941813cb5dc83db4799e54d4ab18d9ac88292f95bf744124bbe9d",
+      "size": 7724,
       "source": {
         "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
         "path": "agents/shared/portable/skills/research-workflow/SKILL.md",
@@ -877,6 +879,40 @@
       "source": {
         "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
         "path": "agents/shared/skills/scikit-learn/scripts/clustering_analysis.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/show-me/LICENSE": {
+      "mode": "0644",
+      "sha256": "b30fc237610468e11ec516f1853f763c089e04a12842c4963f8b161ce449c7c9",
+      "size": 1066,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "LICENSE",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/show-me/SKILL.md": {
+      "adapted": true,
+      "mode": "0644",
+      "original_sha256": "09f432ee237834f9a94827812aa4834f97511cee18c1b66a08fee51f97df0849",
+      "sha256": "23222b4e52f681b0bfec9dff42cc434d6e2de2cf58c883ae67ee13743122f380",
+      "size": 4858,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/show-me/SKILL.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/show-me/assets/research-summary.html": {
+      "adapted": true,
+      "mode": "0644",
+      "original_sha256": "3d23b7951f471b497311ff0847ef3a3b47053fb074e76f7c911dfa682cfa62d8",
+      "sha256": "4e4d44a8b0c9d71403c5b5a43e5bfb0f529968572e5f11fbc657d6e69281f7c8",
+      "size": 10450,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/show-me/references/design.md",
         "repository": "YoheiOhto/env"
       }
     },
@@ -1048,6 +1084,24 @@
         "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
         "path": "agents/shared/skills/statistical-power/scripts/simulate_power.py",
         "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/visual-assets/LICENSE": {
+      "mode": "0644",
+      "sha256": "b30fc237610468e11ec516f1853f763c089e04a12842c4963f8b161ce449c7c9",
+      "size": 1066,
+      "source": {
+        "kind": "first-party",
+        "repository": "YoheiOhto/research-agent-kit"
+      }
+    },
+    "skills/visual-assets/SKILL.md": {
+      "mode": "0644",
+      "sha256": "a7b4d49ee9fdcb2113f01818bda2b55c67232d770743fcce30357007d372dfdb",
+      "size": 5525,
+      "source": {
+        "kind": "first-party",
+        "repository": "YoheiOhto/research-agent-kit"
       }
     },
     "skills/yomiyasu/.codex-plugin/plugin.json": {
@@ -1466,8 +1520,8 @@
     },
     "templates/project-AGENTS.md": {
       "mode": "0644",
-      "sha256": "12bd3228235e598fc40f97bee2c56944e23d02cca320728057010fce1d1df895",
-      "size": 3250,
+      "sha256": "c76b25e8f4554c49631c44004db1621f603bf5fb0bf32f9aeb268403ce93f626",
+      "size": 3541,
       "source": {
         "kind": "first-party",
         "repository": "YoheiOhto/research-agent-kit"
@@ -1514,8 +1568,8 @@
     },
     "tests/test_distribution.py": {
       "mode": "0644",
-      "sha256": "856a7733c1ad40636286eecc65206a209baa466ca5cb6065bda24659718931b3",
-      "size": 11286,
+      "sha256": "0b94ba695a64eac8d6c3a6cc5a0b1af79d99ad372a4f477b71ce67ca684431b1",
+      "size": 14087,
       "source": {
         "kind": "first-party",
         "repository": "YoheiOhto/research-agent-kit"
@@ -1577,7 +1631,9 @@
     "git-workflow",
     "find-existing",
     "research-review",
-    "preempt"
+    "preempt",
+    "show-me",
+    "visual-assets"
   ],
   "primary_audience": "mizuno-lab",
   "schema_version": 1,
@@ -1594,7 +1650,9 @@
     "git-workflow",
     "find-existing",
     "research-review",
-    "preempt"
+    "preempt",
+    "show-me",
+    "visual-assets"
   ],
   "upstream_snapshot": {
     "additional_sources": [
@@ -1605,7 +1663,9 @@
       "docs/experiment_planning.md",
       "agents/shared/skills/debug-experiment/SKILL.md",
       "agents/shared/skills/resource-planning/SKILL.md",
-      "agents/shared/skills/remote-experiment/SKILL.md"
+      "agents/shared/skills/remote-experiment/SKILL.md",
+      "agents/shared/skills/show-me/SKILL.md",
+      "agents/shared/skills/show-me/references/design.md"
     ],
     "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
     "exporter": "tools/agents/agent_snapshot.py",

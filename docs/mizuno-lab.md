@@ -102,6 +102,8 @@ textのmodel判定では実行機上のmodel・runtimeの入力容量を確認�
 
 図は元表・code・来歴とともにPNGと適切なSVGを保存し、実画像を開いて確認します。大戸のenvの正式な結果最終化ではPNG/PDF/SVGと確認記録・receiptを検証してから結論を採用します。このkitのreview note例だけで、そのreceiptを代用しません。HTMLは依頼時だけ作り、通常はチャットで説明します。
 
+一般画像・編集と制作方法の選択は[visual-assets](../skills/visual-assets/SKILL.md)、依頼されたHTMLの説明と意匠は[show-me](../skills/show-me/SKILL.md)を使えます。HTML assetはskill内へ同梱し、他の設定をコピーしなくても読める構成です。CSS・画像・本文の外部依存を点検し、未記入をdraftとして表示します。配布用ひな形をrepoへ置くことと、利用者の実ページを保存・公開することは別です。
+
 ## 7. Slack通知とメンション
 
 この節は対応するenvの通知コードを導入済みの利用者向けです。本kitはSlackを送信せず、設定を追加しただけで通知が動くわけではありません。
@@ -141,6 +143,8 @@ textのmodel判定では実行機上のmodel・runtimeの入力容量を確認�
 | 研究codeの正しさを読む | [research-review](../skills/research-review/SKILL.md)。既定は差分reviewで、修正・新しい分析・再実行を自動で始めない |
 | 長時間処理の途中保存・再開を設計する | [preempt](../skills/preempt/SKILL.md)。保存状態・入力と設定の同一性・重複しない再開・軽い合成確認を扱う |
 | 結果と図を残す | [結果サマリー](../templates/result-summary.md)。未確認の結果や画像をreview済みと書かない |
+| 一般画像の生成・編集と実験図を選び分ける | [visual-assets](../skills/visual-assets/SKILL.md)。実在するtool、保持条件・透明度、実見、最終保存先・来歴を確認 |
+| HTMLで説明する | [show-me](../skills/show-me/SKILL.md)と[HTMLひな形](../skills/show-me/assets/research-summary.html)。明示依頼時だけ作成し、実画像・表示・外部依存を確認 |
 | 出力増加を抑える | [保持方針](../templates/storage-policy.md)。集約単位・必要なcheckpoint・保持根拠・枠を合意し、容量だけを理由に証拠を捨てない |
 | 別の計算機へ引き継ぐ | [引継ぎひな形](../templates/remote-handoff.md)。移設先・承認・identity・分担・照合を記録 |
 

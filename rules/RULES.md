@@ -32,6 +32,8 @@ Use the project's canonical records and agreed output locations. Create only req
 
 ## Verification and communication
 
+For explicitly requested HTML, use the installed `show-me` skill and its template. For image creation or editing, use the installed `visual-assets` skill to distinguish scientific plots, conceptual diagrams and generated illustrations. Neither installs a provider, grants execution/publication permission, or turns generated pictures into scientific evidence.
+
 Reuse existing implementations before adding another. Keep changes focused and validate behavior and safety invariants with checks appropriate to the risk. Stop dependent actions when required instructions, approvals or validation are missing; continue independent authorized work when possible.
 
 Report results and decisions first, then link canonical evidence. State what changed, why, what was actually checked and what remains unknown. Name the unit and denominator for counts; label estimates and incomplete scans. Instructions, successful tool calls and completion markers alone do not prove enforcement, scientific validity or successful task completion.
