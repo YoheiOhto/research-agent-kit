@@ -1,0 +1,1415 @@
+{
+  "activation": "Manual review and selected-file installation only; no settings or hooks activated.",
+  "audience": "third-party",
+  "files": {
+    ".github/workflows/check.yml": {
+      "mode": "0644",
+      "sha256": "44f72151cfe74dd27430416af41fd3986cbeee6a88c5b79929a16103d6692295",
+      "size": 540,
+      "source": {
+        "kind": "first-party",
+        "repository": "YoheiOhto/research-agent-kit"
+      }
+    },
+    ".gitignore": {
+      "mode": "0644",
+      "sha256": "198fb45f43406ce0d0b27276579b2862209c37240bc5d232e0425027bc60f1c7",
+      "size": 57,
+      "source": {
+        "kind": "first-party",
+        "repository": "YoheiOhto/research-agent-kit"
+      }
+    },
+    "LICENSE": {
+      "mode": "0664",
+      "sha256": "b30fc237610468e11ec516f1853f763c089e04a12842c4963f8b161ce449c7c9",
+      "size": 1066,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "LICENSE",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "README.md": {
+      "adapted": true,
+      "mode": "0644",
+      "original_sha256": "96bb8c7b0d8428a3bd81271c4ecb49cac68196dd513b722aac4be0efdbc9e615",
+      "sha256": "06b9aa1cf2f7f5b4467444e7417fcc2d3a124aa2b0f03d0be3cd5439a775e09c",
+      "size": 19284,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/portable/README.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "hooks/invocation_counts.py": {
+      "mode": "0664",
+      "sha256": "fe264373fbcac9dd9c0982ac3ab1bdbc5e85e0ad84c149d25dc440b59a1a3eb6",
+      "size": 9324,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/hooks/invocation_counts.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "hooks/usage_hook.py": {
+      "mode": "0664",
+      "sha256": "dacb3b549018a3e1916ccb3799601ca671d0ff70a2156e7396c78dbe17e2ffc0",
+      "size": 4171,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/hooks/usage_hook.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "rules/RULES.md": {
+      "mode": "0664",
+      "sha256": "30261b313d71245fe8d734e49ea9b9f289b6e28441cc4e993e0601f9f0cefec8",
+      "size": 4255,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/portable/RULES.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/biopython/LICENSE": {
+      "mode": "0664",
+      "sha256": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+      "size": 1068,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/biopython/LICENSE",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/biopython/SKILL.md": {
+      "mode": "0664",
+      "sha256": "b617561b38a2e3ecc8f8cf3dd8bb0307ac1aaf4d67e6e0432b0c248bc4382245",
+      "size": 17223,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/biopython/SKILL.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/biopython/SOURCE.json": {
+      "mode": "0664",
+      "sha256": "0ebe68a97165037ce2ee64381e380605655d8536d045eb73bf333e79cb39afae",
+      "size": 1374,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/biopython/SOURCE.json",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/biopython/references/advanced.md": {
+      "mode": "0664",
+      "sha256": "b023aa7df32c4c5f8db621929e23dde64ae0ef77169cbfdefdf479068c0001a8",
+      "size": 16115,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/biopython/references/advanced.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/biopython/references/alignment.md": {
+      "mode": "0664",
+      "sha256": "99668ee8cf0314f655149a8383f931d51ec039dea566a51219f7f37b02ef6bd4",
+      "size": 9957,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/biopython/references/alignment.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/biopython/references/blast.md": {
+      "mode": "0664",
+      "sha256": "487953c8120658887de77fe794cc07881b0a223f68e29b4575ec317995fa7151",
+      "size": 14077,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/biopython/references/blast.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/biopython/references/databases.md": {
+      "mode": "0664",
+      "sha256": "87dcee5bb51eff9959c313b6680aebf7ff064155599bbb03630325148809bb50",
+      "size": 13802,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/biopython/references/databases.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/biopython/references/phylogenetics.md": {
+      "mode": "0664",
+      "sha256": "c0129d6636b7628a512f5338e2afc0101561377210467d17c47008115d851ac6",
+      "size": 15174,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/biopython/references/phylogenetics.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/biopython/references/review.md": {
+      "mode": "0664",
+      "sha256": "a44292d82f9ec99f1b232a835275e694275709b928e297ed9cc24ed1dbc2f139",
+      "size": 6322,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/biopython/references/review.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/biopython/references/sequence_io.md": {
+      "mode": "0664",
+      "sha256": "cb858b46c28873e5b681b54eba37cbf919dc9febe7d282ca3aeafafe3603c514",
+      "size": 8215,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/biopython/references/sequence_io.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/biopython/references/structure.md": {
+      "mode": "0664",
+      "sha256": "c5805632d9bd56cc933374a932a3669444329b135ba275216492659d5420da2e",
+      "size": 13432,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/biopython/references/structure.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/experimental-design/LICENSE": {
+      "mode": "0664",
+      "sha256": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+      "size": 1068,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/experimental-design/LICENSE",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/experimental-design/SKILL.md": {
+      "mode": "0664",
+      "sha256": "db2de0f3d29b7729776a91e923c9c83801298f5ad8e88fe44570045fbefcc248",
+      "size": 16328,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/experimental-design/SKILL.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/experimental-design/SOURCE.json": {
+      "mode": "0664",
+      "sha256": "ac5df9753b68962e8a86d65c24534c0140cf5c62a0d7af11e1b0db66fe6b30f6",
+      "size": 1158,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/experimental-design/SOURCE.json",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/experimental-design/references/design_types.md": {
+      "mode": "0664",
+      "sha256": "1f36f14160bc9895773a2922402869202866410c9130f2b32c5a54e5f5a6e71b",
+      "size": 7972,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/experimental-design/references/design_types.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/experimental-design/references/factorial_and_doe.md": {
+      "mode": "0664",
+      "sha256": "a59fa2279c439c096a66955b4923ad68c00d6046570665e6f6d36e807fa1de63",
+      "size": 9069,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/experimental-design/references/factorial_and_doe.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/experimental-design/references/randomization_and_blocking.md": {
+      "mode": "0664",
+      "sha256": "fabcfae913397fb8c3018b959b67ddf8fe47322b40cbf4155d898fa11738e9ae",
+      "size": 7831,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/experimental-design/references/randomization_and_blocking.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/experimental-design/references/sequential_and_adaptive.md": {
+      "mode": "0664",
+      "sha256": "83085e2cde0942de23670d3aabb30768fb576a6aa99c2e4ac6f7790b00977051",
+      "size": 6530,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/experimental-design/references/sequential_and_adaptive.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/experimental-design/scripts/doe_designs.py": {
+      "mode": "0664",
+      "sha256": "916996b5e6a5dbb9a408aa1e755a95800af70231e46d12c8c5efddb9e3e30683",
+      "size": 9575,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/experimental-design/scripts/doe_designs.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/experimental-design/scripts/randomization.py": {
+      "mode": "0664",
+      "sha256": "c7c2eab469618a4b27548058b924ec3f4aafaf635d3797af920b9058e700bce4",
+      "size": 9592,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/experimental-design/scripts/randomization.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/exploratory-data-analysis/LICENSE": {
+      "mode": "0664",
+      "sha256": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+      "size": 1068,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/exploratory-data-analysis/LICENSE",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/exploratory-data-analysis/SKILL.md": {
+      "mode": "0664",
+      "sha256": "955c4cefa49106dd03b55cbd62603bab2d2fb678e627dd452ba62040c7128484",
+      "size": 14722,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/exploratory-data-analysis/SKILL.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/exploratory-data-analysis/SOURCE.json": {
+      "mode": "0664",
+      "sha256": "6ac170e20420fd418da64dc7a844b9d5e26bb25cdb05d1dd061147756ad0924b",
+      "size": 2710,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/exploratory-data-analysis/SOURCE.json",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/exploratory-data-analysis/assets/report_template.md": {
+      "mode": "0664",
+      "sha256": "c6cd0644dbefeb64c77e84935509f52a92d45256daf2cd4be84012e99e4d7d44",
+      "size": 7873,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/exploratory-data-analysis/assets/report_template.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/exploratory-data-analysis/references/bioinformatics_genomics_formats.md": {
+      "mode": "0664",
+      "sha256": "b3594673cbe22e29fd5bc2681c1b53d4f8b02b48ff17fc9ffaf5a09d1d885be3",
+      "size": 8977,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/exploratory-data-analysis/references/bioinformatics_genomics_formats.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/exploratory-data-analysis/references/chemistry_molecular_formats.md": {
+      "mode": "0664",
+      "sha256": "3ff937541ebf0396d4c2304016cebc42d405110300df7379f59c40953fc8ed41",
+      "size": 8732,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/exploratory-data-analysis/references/chemistry_molecular_formats.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/exploratory-data-analysis/references/general_scientific_formats.md": {
+      "mode": "0664",
+      "sha256": "42bcf3389bbd78e426dd41139208517f3f78bdc17e068a1eb3a984d2f2487320",
+      "size": 12276,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/exploratory-data-analysis/references/general_scientific_formats.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/exploratory-data-analysis/references/microscopy_imaging_formats.md": {
+      "mode": "0664",
+      "sha256": "c96bb7291ded320a106800c1132191683aa3028f2240c5fcf954079f1a26c382",
+      "size": 9305,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/exploratory-data-analysis/references/microscopy_imaging_formats.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/exploratory-data-analysis/references/proteomics_metabolomics_formats.md": {
+      "mode": "0664",
+      "sha256": "66d9493fe14c717f5e8e60500e8fa7bfe1f619084e23b643a767f0952a35efd7",
+      "size": 9821,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/exploratory-data-analysis/references/proteomics_metabolomics_formats.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/exploratory-data-analysis/references/spectroscopy_analytical_formats.md": {
+      "mode": "0664",
+      "sha256": "102a68c212ef5447815c889cf06668f3cb5bd8644f018354d6e98d1a15101a0f",
+      "size": 9555,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/exploratory-data-analysis/references/spectroscopy_analytical_formats.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/exploratory-data-analysis/scripts/__init__.py": {
+      "mode": "0664",
+      "sha256": "87539288ce5d4caf24fc9fca14e5d70c41730c9d4285106ac4db0c4b5cefd60c",
+      "size": 69,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/exploratory-data-analysis/scripts/__init__.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/exploratory-data-analysis/scripts/_capabilities.py": {
+      "mode": "0664",
+      "sha256": "93fd42bcc6940db0a6cad364dab42a52f0867e782f7e93c9b27c4185249edc06",
+      "size": 20714,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/exploratory-data-analysis/scripts/_capabilities.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/exploratory-data-analysis/scripts/_common.py": {
+      "mode": "0664",
+      "sha256": "f363af255cc78ea63864e0da9f679f57a9e71efd36b6813332f3d2c419b30d51",
+      "size": 14293,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/exploratory-data-analysis/scripts/_common.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/exploratory-data-analysis/scripts/_structured.py": {
+      "mode": "0664",
+      "sha256": "8cb23c8552339acc926f4dc84e1ec032c79152515098e1fd97f2326b84b4ead9",
+      "size": 14683,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/exploratory-data-analysis/scripts/_structured.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/exploratory-data-analysis/scripts/_tabular.py": {
+      "mode": "0664",
+      "sha256": "5d1db825890dd035c30e51ac1c11aee56e1e1dca6ffd238ee87ae7d51d8df2f0",
+      "size": 32782,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/exploratory-data-analysis/scripts/_tabular.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/exploratory-data-analysis/scripts/capability_manifest.py": {
+      "mode": "0664",
+      "sha256": "1e52e1db668ebce919751a75b53ad959c36749e4b1695f59d8ac2d6c8eda4abf",
+      "size": 5433,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/exploratory-data-analysis/scripts/capability_manifest.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/exploratory-data-analysis/scripts/distribution_sensitivity.py": {
+      "mode": "0664",
+      "sha256": "ca6e9f3dd59cfb382b1ff0874e709933c136ec942085a0437d4000bbf7f1f3c8",
+      "size": 3304,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/exploratory-data-analysis/scripts/distribution_sensitivity.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/exploratory-data-analysis/scripts/eda_analyzer.py": {
+      "mode": "0664",
+      "sha256": "6532b28ad3f28dd9f58acecb54361c8271d2755584a54ecb0be34da74d1e5d20",
+      "size": 10547,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/exploratory-data-analysis/scripts/eda_analyzer.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/exploratory-data-analysis/scripts/image_inspector.py": {
+      "mode": "0664",
+      "sha256": "79c21b35d01376929ff0edf26a3bb25923b9e75458c586e0f5721cec356fe639",
+      "size": 7931,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/exploratory-data-analysis/scripts/image_inspector.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/exploratory-data-analysis/scripts/missingness_leakage_audit.py": {
+      "mode": "0664",
+      "sha256": "28458714e80ee31db636c0265ba21e1623ba27816d31e236fdc9b873a5b78ffc",
+      "size": 3904,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/exploratory-data-analysis/scripts/missingness_leakage_audit.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/exploratory-data-analysis/scripts/report_scaffold.py": {
+      "mode": "0664",
+      "sha256": "4d745592384bfceb0ec7384eecfc5e8ba49ebfa4ec55be75a99ce7c7e102f60b",
+      "size": 4247,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/exploratory-data-analysis/scripts/report_scaffold.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/exploratory-data-analysis/scripts/sequence_inspector.py": {
+      "mode": "0664",
+      "sha256": "11ca2fa3a0d660192631b9b562f362b0fd120c9e54639bfb049c600c6920be28",
+      "size": 8621,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/exploratory-data-analysis/scripts/sequence_inspector.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/exploratory-data-analysis/scripts/tabular_profile.py": {
+      "mode": "0664",
+      "sha256": "78cd139292c18e31d17de882762948db7b51fdc3278546f994270a287d0149db",
+      "size": 3077,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/exploratory-data-analysis/scripts/tabular_profile.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/gget/LICENSE": {
+      "mode": "0664",
+      "sha256": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+      "size": 1068,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/gget/LICENSE",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/gget/SKILL.md": {
+      "mode": "0664",
+      "sha256": "55027a94be8dde013fd17e563ba20ccba92b7131c29c21e9c83e54fbce2b348a",
+      "size": 11253,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/gget/SKILL.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/gget/SOURCE.json": {
+      "mode": "0664",
+      "sha256": "62b7970a60f15d6111031b1f593d665d41bb166e4099c070f1562fc065b6ded5",
+      "size": 1406,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/gget/SOURCE.json",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/gget/references/common_workflows.md": {
+      "mode": "0664",
+      "sha256": "125d01874c0577e29b50ca9fb43bcf995ed0816662b11fb20941948cfbe58400",
+      "size": 2570,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/gget/references/common_workflows.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/gget/references/database_info.md": {
+      "mode": "0664",
+      "sha256": "01ddea3b3b404dbaf3af96300d6f1ca506bc2a1fcee5604bb5bb679d5824e0b5",
+      "size": 13641,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/gget/references/database_info.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/gget/references/module_catalog.md": {
+      "mode": "0664",
+      "sha256": "853ea6b9252d952908913e23d9b76b0b3af19eedde5b7617f72aa993b7cc2833",
+      "size": 26673,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/gget/references/module_catalog.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/gget/references/module_reference.md": {
+      "mode": "0664",
+      "sha256": "2c40d6bdab786e316a15eee7fbd82ebd90f4b2f34ff8aab1e5575f39ee3cf38d",
+      "size": 24332,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/gget/references/module_reference.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/gget/references/workflows.md": {
+      "mode": "0664",
+      "sha256": "5e3909d8d58acbdde98b449e1649c21b8c28446fa39d11e2d8c88fada4259bd9",
+      "size": 9807,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/gget/references/workflows.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/gget/scripts/batch_sequence_analysis.py": {
+      "mode": "0664",
+      "sha256": "faccfffc861a5fd2b391933341e4f5c6dcaf98b71818c050d0b93412f4449100",
+      "size": 6717,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/gget/scripts/batch_sequence_analysis.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/gget/scripts/enrichment_pipeline.py": {
+      "mode": "0664",
+      "sha256": "9acb953ce9ae90c8b470135b382107fdd01ab35f1323ee877b4f8a3bd71dcbb3",
+      "size": 7917,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/gget/scripts/enrichment_pipeline.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/gget/scripts/gene_analysis.py": {
+      "mode": "0664",
+      "sha256": "b72b3371deee1298381811acd1166f5b2e25ff0e1423d1133c7f8f355cdcbfce",
+      "size": 7603,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/gget/scripts/gene_analysis.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/research-workflow/LICENSE": {
+      "mode": "0664",
+      "sha256": "b30fc237610468e11ec516f1853f763c089e04a12842c4963f8b161ce449c7c9",
+      "size": 1066,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/portable/skills/research-workflow/LICENSE",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/research-workflow/SKILL.md": {
+      "mode": "0664",
+      "sha256": "e91294bd85a4c904bc91a270fc131a357713147ff61cc48fd122acaf0c8e9c3a",
+      "size": 7260,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/portable/skills/research-workflow/SKILL.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/research-workflow/references/example.md": {
+      "mode": "0664",
+      "sha256": "62ad0c9635ecb12abc376d9235e129207f8de41251ca90dcddde620a0b984781",
+      "size": 5987,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/portable/skills/research-workflow/references/example.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/scikit-learn/LICENSE": {
+      "mode": "0664",
+      "sha256": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+      "size": 1068,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/scikit-learn/LICENSE",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/scikit-learn/SKILL.md": {
+      "mode": "0664",
+      "sha256": "a1765797d072ab40094522abe68fb04505d0881f66b7dfceeb8582422dbe488d",
+      "size": 13255,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/scikit-learn/SKILL.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/scikit-learn/SOURCE.json": {
+      "mode": "0664",
+      "sha256": "498099bd601639271422b728f8945ff8691195d241702efc12d1ff5ea7ec3957",
+      "size": 1658,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/scikit-learn/SOURCE.json",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/scikit-learn/references/common_workflows.md": {
+      "mode": "0664",
+      "sha256": "dfe19c80358acb5f418a21cea4de3b7e83733481441f3c76d0a2ead4420261de",
+      "size": 3723,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/scikit-learn/references/common_workflows.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/scikit-learn/references/core_capabilities.md": {
+      "mode": "0664",
+      "sha256": "c869d9c207fcfc345207d397021a289f3820492ddf0fcd0b3a56a336bd0e1453",
+      "size": 5113,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/scikit-learn/references/core_capabilities.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/scikit-learn/references/model_evaluation.md": {
+      "mode": "0664",
+      "sha256": "e6f581c0ce2abffaac2f0bafc1a7bfbe86ec18f8969c6e9b91cc732a12a5fea5",
+      "size": 19482,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/scikit-learn/references/model_evaluation.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/scikit-learn/references/pipelines_and_composition.md": {
+      "mode": "0664",
+      "sha256": "a1810cd67dc9141d962fa1972e11b06be6bd437213e10a563e5ec4256fb274a9",
+      "size": 15892,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/scikit-learn/references/pipelines_and_composition.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/scikit-learn/references/preprocessing.md": {
+      "mode": "0664",
+      "sha256": "098506f0ca83e57d0c7cccd166164d025552ad7310b79d1010f5ff34e1cc4818",
+      "size": 18359,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/scikit-learn/references/preprocessing.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/scikit-learn/references/quick_reference.md": {
+      "mode": "0664",
+      "sha256": "5401b75fdaa10bf393b024f3c559631011c7be233d2313da37a3f27d7389659a",
+      "size": 12448,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/scikit-learn/references/quick_reference.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/scikit-learn/references/supervised_learning.md": {
+      "mode": "0664",
+      "sha256": "d4e5911d175c3a349dd42e33c984b05cdafce230f264b6774996d0eeef36608a",
+      "size": 12101,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/scikit-learn/references/supervised_learning.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/scikit-learn/references/unsupervised_learning.md": {
+      "mode": "0664",
+      "sha256": "cb476ef499fe35ee2c0416fdc31abad42384ac0110f6d3932901e99b039ae1b1",
+      "size": 16752,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/scikit-learn/references/unsupervised_learning.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/scikit-learn/scripts/classification_pipeline.py": {
+      "mode": "0664",
+      "sha256": "46abbb2b11095147cc31314405910b211c313d142f2480599f8508d47e5809f3",
+      "size": 10293,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/scikit-learn/scripts/classification_pipeline.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/scikit-learn/scripts/clustering_analysis.py": {
+      "mode": "0664",
+      "sha256": "5d1f962a70e049907a39a75cd7a130000a5d3e3de5a4fa4889d07f007c052a17",
+      "size": 11681,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/scikit-learn/scripts/clustering_analysis.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/statistical-analysis/LICENSE": {
+      "mode": "0664",
+      "sha256": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+      "size": 1068,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/statistical-analysis/LICENSE",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/statistical-analysis/SKILL.md": {
+      "mode": "0664",
+      "sha256": "e112848726b3713267cac65e4e2c15491a0a26ee1ed628db01195f7e43f97997",
+      "size": 23585,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/statistical-analysis/SKILL.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/statistical-analysis/SOURCE.json": {
+      "mode": "0664",
+      "sha256": "14628ee8adaf489b17a1e74d254b36750d5cd1b388b4e5c973891ac30f7f28ca",
+      "size": 1240,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/statistical-analysis/SOURCE.json",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/statistical-analysis/references/assumptions_and_diagnostics.md": {
+      "mode": "0664",
+      "sha256": "6e1ebc110c092845b93e5c6d28f38c8a990780105ba1865f0bd47c007620b073",
+      "size": 14654,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/statistical-analysis/references/assumptions_and_diagnostics.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/statistical-analysis/references/bayesian_statistics.md": {
+      "mode": "0664",
+      "sha256": "34d62e1b20dd82a11497be40e07c93e4fdb555d56e4944e200f881c1b7629cbf",
+      "size": 14557,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/statistical-analysis/references/bayesian_statistics.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/statistical-analysis/references/effect_sizes_and_power.md": {
+      "mode": "0664",
+      "sha256": "5e1321c9058b2931a1bd2a753c7a8f4295f58274412d62e99a34eabd478e42b2",
+      "size": 20907,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/statistical-analysis/references/effect_sizes_and_power.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/statistical-analysis/references/reporting_standards.md": {
+      "mode": "0664",
+      "sha256": "0a30a1bec63231c94c9c285977acaa4218c50a34c8385857d18f62c61ac817b7",
+      "size": 21469,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/statistical-analysis/references/reporting_standards.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/statistical-analysis/references/test_selection_guide.md": {
+      "mode": "0664",
+      "sha256": "e72e00b6ebe9450e5e84849503db223c4908a8d9a68c3b87cf0ab8ec3254fe83",
+      "size": 6950,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/statistical-analysis/references/test_selection_guide.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/statistical-analysis/scripts/assumption_checks.py": {
+      "mode": "0664",
+      "sha256": "3e37a4e04407b5f040f103962ed0e73935d114d3892ee45b5a06a1da42c10341",
+      "size": 18387,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/statistical-analysis/scripts/assumption_checks.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/statistical-power/LICENSE": {
+      "mode": "0664",
+      "sha256": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+      "size": 1068,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/statistical-power/LICENSE",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/statistical-power/SKILL.md": {
+      "mode": "0664",
+      "sha256": "a969660eafdc3504ac36e49bd7ded00e18b00fe5cef5699940d5d8281e24dd3d",
+      "size": 17834,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/statistical-power/SKILL.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/statistical-power/SOURCE.json": {
+      "mode": "0664",
+      "sha256": "81492b3be94828b87e4798c9b74270f2a8dbf2576943a1e3dc29cbf597aaf0ce",
+      "size": 1092,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/statistical-power/SOURCE.json",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/statistical-power/references/closed_form_recipes.md": {
+      "mode": "0664",
+      "sha256": "c303aa5b5103077304254f48309169609a3b0537748c68e0df4abd33cb9d4384",
+      "size": 11159,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/statistical-power/references/closed_form_recipes.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/statistical-power/references/effect_sizes.md": {
+      "mode": "0664",
+      "sha256": "b2e3c9578dce59222797ea55e9bc2c3883764adfdfdc0eed3793fb4d71fbf0a7",
+      "size": 6110,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/statistical-power/references/effect_sizes.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/statistical-power/references/simulation_based_power.md": {
+      "mode": "0664",
+      "sha256": "963fd56791e6db1bffb94efda7c9bef9c3195e3dec3e2a9918d17f3536ec150f",
+      "size": 10163,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/statistical-power/references/simulation_based_power.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/statistical-power/scripts/power.py": {
+      "mode": "0664",
+      "sha256": "9124b7c657ccbfe8b41c777bd9e17ae076641939e4ae93b4ba17f2de18284b7d",
+      "size": 19966,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/statistical-power/scripts/power.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/statistical-power/scripts/simulate_power.py": {
+      "mode": "0664",
+      "sha256": "bfbe75908ca071528b7b02aa1ed53949a7291f928f30634abe29b3ce23c564f4",
+      "size": 13193,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/statistical-power/scripts/simulate_power.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/.codex-plugin/plugin.json": {
+      "mode": "0664",
+      "sha256": "b26d6af9532a22e6ca8d825196a4816fee3ca0a06458419f5427d5252a856318",
+      "size": 25,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/.codex-plugin/plugin.json",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/LICENSE": {
+      "mode": "0664",
+      "sha256": "79d802f15bc8caf67f1a83c1bdbe214ccb41a0a0275f9046b329b89c65ee1fca",
+      "size": 1064,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/LICENSE",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/SKILL.md": {
+      "mode": "0664",
+      "sha256": "9895ca044c20d7d186700ac69e0235ed1758a38f2cb500ef7776a65f620e56a4",
+      "size": 116245,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/SKILL.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/SOURCE.json": {
+      "mode": "0664",
+      "sha256": "fdeeb3f8c5c9f7ea2359ea5c87d9dbf607dfdf4573b24c729876279b6d0f9fc8",
+      "size": 4634,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/SOURCE.json",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/UNICODE-LICENSE.txt": {
+      "mode": "0664",
+      "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+      "size": 1995,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/UNICODE-LICENSE.txt",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/assets/algo-artis.png": {
+      "mode": "0664",
+      "sha256": "57c7c204d43d0e2873e3b61221db3ac4ba75a7ce29271a6deaeb3bd09f26fdec",
+      "size": 29045,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/assets/algo-artis.png",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/references/audience.md": {
+      "mode": "0664",
+      "sha256": "c9a022d96c67055dfae2b45fa318a83f45bb41dd10023e169fadee6dea30f531",
+      "size": 21624,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/references/audience.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/references/doc-types/article.md": {
+      "mode": "0664",
+      "sha256": "e5009c496b4b4ac8974c16f2f15b0f8ce93620863dfe721803b01138db845716",
+      "size": 1338,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/references/doc-types/article.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/references/doc-types/essay.md": {
+      "mode": "0664",
+      "sha256": "0f937b0dc89094813f83cdc51bc89c1eb3c9dc99a6ab08302941825ac1f54646",
+      "size": 4399,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/references/doc-types/essay.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/references/doc-types/formal.md": {
+      "mode": "0664",
+      "sha256": "6b4121d4e57d52fb60fb428770a4504c53e1fb06c3fa20e57a1fcd56ce933141",
+      "size": 2933,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/references/doc-types/formal.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/references/doc-types/incident.md": {
+      "mode": "0664",
+      "sha256": "d25282690b220e5d4fa2595228d282d65f7b03d8d4b325c30bf251b58a474b77",
+      "size": 1841,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/references/doc-types/incident.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/references/doc-types/mail.md": {
+      "mode": "0664",
+      "sha256": "43c84865368c6e1e61c0ac1645583933092ddcaabb49b6ed4b6c4621e9ba2d4f",
+      "size": 6329,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/references/doc-types/mail.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/references/doc-types/manual.md": {
+      "mode": "0664",
+      "sha256": "37971c4b7cf8159656a2435b30444a05692fbdffdd7dc3dd8e8f4ada90e8ef8f",
+      "size": 1567,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/references/doc-types/manual.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/references/doc-types/minutes.md": {
+      "mode": "0664",
+      "sha256": "7869c10e72e0e4ce6ecb94833e84452beba7f8b676230908fe623deddc49b140",
+      "size": 1356,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/references/doc-types/minutes.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/references/doc-types/paper.md": {
+      "mode": "0664",
+      "sha256": "ed2957332ef12464d4bc43bc22ca2250229eca57f39b11597d2632fab020f12c",
+      "size": 5681,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/references/doc-types/paper.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/references/doc-types/pr.md": {
+      "mode": "0664",
+      "sha256": "d7bb8a4ac7f5344abf66bb7dfe893480c67ea8d635078c5a8d2582264a21506b",
+      "size": 1736,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/references/doc-types/pr.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/references/doc-types/promo.md": {
+      "mode": "0664",
+      "sha256": "248f57ae1f4565df79f8b8d06081187a1b7af3d7271d7f76764fc1cfd3a0ac3e",
+      "size": 6162,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/references/doc-types/promo.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/references/doc-types/proposal.md": {
+      "mode": "0664",
+      "sha256": "2a8d8a557b33f2df51aedeed02ba5bb8ed623fcde55f6a42ff4b477920853731",
+      "size": 1408,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/references/doc-types/proposal.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/references/doc-types/slides.md": {
+      "mode": "0664",
+      "sha256": "65ba6b3e37da99a8cd3021088b5a1a27f95fefae4b5bfdf7c7bf0ef2439d071c",
+      "size": 1896,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/references/doc-types/slides.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/references/domains/business.md": {
+      "mode": "0664",
+      "sha256": "7d5be30f2bac61b7f47849193f02eaecebd8b27ef5f00e75af12144c9ab061ea",
+      "size": 9153,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/references/domains/business.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/references/domains/essay.md": {
+      "mode": "0664",
+      "sha256": "aeeeb9f9c842d68fa0fcf2e956bd2f87c5f450bc820df931f3f94b903a8a8c7a",
+      "size": 4696,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/references/domains/essay.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/references/domains/tech.md": {
+      "mode": "0664",
+      "sha256": "faeaf3ea41d93e11ef3f679263df23b02a6156da6baecb4eb4dd03f58aa41dd1",
+      "size": 6202,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/references/domains/tech.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/references/fact-recovery-details.md": {
+      "mode": "0664",
+      "sha256": "d845b843578c9f7cb452b7a776adf8b0c162d6a46078271c9cfc6c2311a3875d",
+      "size": 18637,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/references/fact-recovery-details.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/references/fact-recovery.md": {
+      "mode": "0664",
+      "sha256": "f9ff6c31fdfa335574e16b438b73324f4af3d73af650eed4122f779a2e348488",
+      "size": 17895,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/references/fact-recovery.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/references/gemini-syntax.md": {
+      "mode": "0664",
+      "sha256": "6ee93c503fa9b3d81bbff7f2b6058a10a7c236de5d642c344df166d54b62df58",
+      "size": 57865,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/references/gemini-syntax.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/references/lists/fact-gaps.txt": {
+      "mode": "0664",
+      "sha256": "9511f320413e9b9cb970e32b19d238954e20387d8958c3a98a28608a065bfb86",
+      "size": 4076,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/references/lists/fact-gaps.txt",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/references/lists/feelings.txt": {
+      "mode": "0664",
+      "sha256": "5f71a66f5e2679de04ecd30395ab74ca61962297c22ef3f4efa5c8e625446166",
+      "size": 4232,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/references/lists/feelings.txt",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/references/lists/hedges.txt": {
+      "mode": "0664",
+      "sha256": "ed666036f63f4705d2c129d3fd30e971018d50732bbef2c18081412a61ccd771",
+      "size": 303,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/references/lists/hedges.txt",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/references/lists/intensifiers.txt": {
+      "mode": "0664",
+      "sha256": "3e4829226d871ce10e4ae89c49ae218b6d9ed77cafcd6ddfd0fdb6cecd1fec2e",
+      "size": 1391,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/references/lists/intensifiers.txt",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/references/lists/nominalization.txt": {
+      "mode": "0664",
+      "sha256": "2f685bbcd7dfc5ea871ff5655368195d471cea6ac4ff57e75a0648aadd466048",
+      "size": 2256,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/references/lists/nominalization.txt",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/references/persona.md": {
+      "mode": "0664",
+      "sha256": "f9c0879003d3cdad2cae18101bd8b6440e0435534fc7a7f038b0576ac8c3f231",
+      "size": 23905,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/references/persona.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/references/rephrase-test.md": {
+      "mode": "0664",
+      "sha256": "65f5c8fc5d0f4cc42a1f951a863e3b6ef4947e31e29793c2f63bb1094a381693",
+      "size": 9038,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/references/rephrase-test.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/references/review-points.md": {
+      "mode": "0664",
+      "sha256": "1ef31946ab963d3cb27bf597296b31ff62fda569f4a71fb09b925258bcabbab6",
+      "size": 30795,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/references/review-points.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/references/slop-catalog.md": {
+      "mode": "0664",
+      "sha256": "c2b344bc1b0d8de0ae18131da41be8bdf2d8fbade0ffecf2bc8697a13f0bf72e",
+      "size": 39805,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/references/slop-catalog.md",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/scripts/markdown_visibility.py": {
+      "mode": "0664",
+      "sha256": "9891bf9d406a04bee261211f4d80509658721c59e5c27e504fde192fac81bc19",
+      "size": 34655,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/scripts/markdown_visibility.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/scripts/yomiyasu_check.py": {
+      "mode": "0775",
+      "sha256": "3bde38f9425999216a99b8ce21fd697be408d3f5b46e09677b788e34fe551da0",
+      "size": 274715,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/scripts/yomiyasu_check.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/scripts/yomiyasu_diff.py": {
+      "mode": "0775",
+      "sha256": "1f7430366f576ed4b75d97cff6c852fb4adc7ffc8fdb3e0b0726de9e762936ea",
+      "size": 625042,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/scripts/yomiyasu_diff.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/scripts/yomiyasu_hook.py": {
+      "mode": "0664",
+      "sha256": "eeae442c751e491157f395ce504a2d530520d91532d439719c903293932dc66e",
+      "size": 39793,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/scripts/yomiyasu_hook.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "skills/yomiyasu/scripts/yomiyasu_lint.py": {
+      "mode": "0775",
+      "sha256": "167030717ad4ec9a89f3ae05d8500306300629cff67a70bcb6c2b17b7ac396ab",
+      "size": 184580,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "agents/shared/skills/yomiyasu/scripts/yomiyasu_lint.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "tests/test_distribution.py": {
+      "mode": "0644",
+      "sha256": "5f600d279a2e06b0b83ef17ff34a2b9b2437d8c7161c213f9d68b726f7110cb5",
+      "size": 10634,
+      "source": {
+        "kind": "first-party",
+        "repository": "YoheiOhto/research-agent-kit"
+      }
+    },
+    "tools/environment_audit.py": {
+      "mode": "0664",
+      "sha256": "e70be266f6a63eaf5657ce3a7c061ee9b66da59aebd3da5018241c07a51f3250",
+      "size": 11733,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "tools/ops/environment_audit.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "tools/inspect_outputs.py": {
+      "mode": "0664",
+      "sha256": "3360a73f4dbd72c6083d5c0565bcc1accae5676e1eef0764c01573e98558f13c",
+      "size": 856,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "tools/research/audit/inspect_outputs.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "tools/outputs_audit.py": {
+      "mode": "0664",
+      "sha256": "6ba86cc2a7c454d10186e5b2271e41e8bfb4331aceacced8687f6f7bc2b9a53b",
+      "size": 18339,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "tools/research/audit/outputs_audit.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "tools/research_code_check.py": {
+      "mode": "0775",
+      "sha256": "ce89e7f11c84361ce4246aa9f256f0fee6d063ef25f0d4b5f8ba19fe06a122d6",
+      "size": 21224,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "tools/research/code-check/research_code_check.py",
+        "repository": "YoheiOhto/env"
+      }
+    },
+    "tools/static_code_check.py": {
+      "mode": "0664",
+      "sha256": "b3955894262360ecc9278b35511aa818cc0a39ffb7861c5ee4a26f8cfed58211",
+      "size": 512,
+      "source": {
+        "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+        "path": "tools/research/code-check/static_check.py",
+        "repository": "YoheiOhto/env"
+      }
+    }
+  },
+  "first_party_skills": [
+    "research-workflow"
+  ],
+  "schema_version": 1,
+  "skills": [
+    "biopython",
+    "experimental-design",
+    "exploratory-data-analysis",
+    "gget",
+    "scikit-learn",
+    "statistical-analysis",
+    "statistical-power",
+    "yomiyasu",
+    "research-workflow"
+  ],
+  "upstream_snapshot": {
+    "commit": "d0806dd69afbed63f99a56eea377ca421c7022bc",
+    "exporter": "tools/agents/agent_snapshot.py",
+    "repository": "https://github.com/YoheiOhto/env"
+  }
+}
