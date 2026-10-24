@@ -1,14 +1,33 @@
 # research-agent-kit
 
-研究用agentの共有設定です。GitHubによる実験管理・結果保存をまとめた `research-workflow` と8つの専門skill、共通rules、任意の呼出し回数カウンター、読み取り専用の点検ツールを収録しています。
+水野班向けに共有する研究用agent設定です。Git・研究workflow、既存コード探索、研究レビュー、中断・再開の5つの運用skillと8つの専門skill、共通・Git rules、導入・計画・結果のひな形、任意の呼出し回数カウンター、読み取り専用の点検ツールを収録しています。
 
 このrepoをGitで取得し、内容を確認して必要な部分だけを導入します。個人用envの履歴・製品別権限設定・接続先・認証情報は持ち込みません。cloneしただけで、agent設定・通知・定期実行が有効になることはありません。
+
+## 水野班の利用者へ
+
+まず[班向けの導入・運用案内](docs/mizuno-lab.md)で、本人のfork・組織の反映先・Project・計算環境・保存先・Slack設定を確認します。大戸の実例と、他のメンバーが管理者と決める条件を区別しています。
+
+| 知りたいこと | 読む場所 |
+|---|---|
+| branch・commit・PR・組織への反映 | [Git rules](rules/git.md)、[git-workflow skill](skills/git-workflow/SKILL.md) |
+| 実装前の既存コード探索・研究レビュー・途中再開 | [find-existing](skills/find-existing/SKILL.md)、[research-review](skills/research-review/SKILL.md)、[preempt](skills/preempt/SKILL.md) |
+| Issue・Project・実験の実行承認 | [運用案内の4章](docs/mizuno-lab.md#4-issueproject実行承認)、[研究workflow](skills/research-workflow/SKILL.md)、[Issue Form](templates/experiment-plan.yml) |
+| local／Slurm／PBS、資源・token・再開 | [運用案内の5章](docs/mizuno-lab.md#5-localslurmpbsと実行時の確認) |
+| outputs・reports・99-agent・HTML | [運用案内の6章](docs/mizuno-lab.md#6-outputsreports短い記録runtime-state) |
+| 承認待ち・質問回答待ちのSlackメンション | [運用案内の7章](docs/mizuno-lab.md#7-slack通知とメンション) |
+| agent別の権限・profile・導入確認 | [運用案内の8章](docs/mizuno-lab.md#8-agent別設定導入後の確認) |
+| 指示ファイル・plan・結果・保持方針・引継ぎのひな形 | [運用案内の9章](docs/mizuno-lab.md#9-貼って使うひな形とskillの選択)と下記のtemplate一覧 |
+| 失敗の分類・実測からの資源見積もり・遠隔引継ぎ | 運用案内の[10章](docs/mizuno-lab.md#10-失敗時は分類してから対処する)・[11章](docs/mizuno-lab.md#11-資源見積もりの根拠を残す)・[12章](docs/mizuno-lab.md#12-別計算機への引継ぎ) |
+
+Gitの基本形は、`machine/<host> → work/<task>で編集・検証・commit → machine/<host> → 個人main宛のPR`です。mergeと組織への反映は、それぞれ対象を指定した別の判断です。Git helper本体は大戸用の所有者検証等を含むため本kitに収録していません。本人用に対応したenvがある場合の操作と、未導入時に必要な確認をGit skillに記載しています。
 
 ## この設定の特徴と実装範囲
 
 | 特徴 | 具体的な運用 | 実装の範囲 |
 |---|---|---|
 | 必要な情報だけ読む | 依頼と近い規約を先に読み、関係するskill・資料へ進む | rulesとskillの指示。全資料を自動読込みする設定はない |
+| Gitの作業・公開・統合を分ける | work上で編集し、変更を説明してmachineへ戻し、個人PR・組織の段階別PRで反映する | Git rules・skillと大戸の反映例。helperの実装・個人設定・全員への外部操作許可は含めない |
 | 計画とGitHub Issueを対応付ける | 条件を確定したplanと同じ版をIssueへ反映し、その版の実装・実行承認を得る | 手順を収録。Issue自動投稿、実行ゲート、特定のGitHub Projectへの自動登録・認証は含めない |
 | 証拠を一つの結果bundleにつなぐ | run・設定・入力・code commit・失敗や欠損を記録し、未変更のbundleを再利用する | 手順を収録。実験runner・scheduler連携・移設ツールは含めない |
 | 図を作って確認する | 元表・描画コード・来歴とPNG/SVGを保存し、画像を実際に確認する | 手順と合成例。描画環境の自動導入や確認済み記録の自動発行はしない |
@@ -60,7 +79,10 @@ manifestの`mode`はGitが保持する実行属性を`0644`／`0755`で表しま
 | 場所 | 内容 |
 |---|---|
 | `rules/RULES.md` | 依頼の範囲、承認、研究条件、証拠の保全、記録を増やしすぎないための原則 |
-| `skills/` | 研究ワークフロー1つと専門スキル8つ。各1コピーと、その参照資料・補助スクリプト |
+| `rules/git.md` | 編集branch、commit・PR・merge、組織反映、agentが行わないGit操作 |
+| `skills/` | Git・研究・探索・review・再開の運用スキル5つと専門スキル8つ。各1コピーと、その参照資料・補助スクリプト |
+| `docs/mizuno-lab.md` | 班向けの導入・運用。Git、Issue／Project、計算環境、保存、Slack、agent設定 |
+| `templates/experiment-plan.yml` | 対象研究repoへ選んで導入する実験計画のIssue Form。実行承認やProject登録は行わない |
 | `hooks/usage_hook.py` | 明示的に有効にした呼出しの計測用wrapper・observer |
 | `hooks/invocation_counts.py` | 計測結果の集計・表示 |
 | `tools/static_code_check.py`、`tools/research_code_check.py` | 明示したソース範囲を検査する入口と内部実装。静的入口はプロジェクトの任意コマンドを実行しない |
@@ -71,7 +93,11 @@ manifestの`mode`はGitが保持する実行属性を`0644`／`0755`で表しま
 
 | スキル名 | 何に使うか |
 |---|---|
+| `git-workflow` | work・machine・個人mainへのPR、組織反映、承認の区別、Git操作の失敗を扱う |
 | `research-workflow` | 計画とIssueの対応付け、承認された実行、結果・PNG/SVGの保存、依頼時のHTML共有 |
+| `find-existing` | 実装前に既存ライブラリ・類似実験・Example・並行変更を限定探索し、再利用候補を返す |
+| `research-review` | 差分を中心にデータ・分割・指標・再現性・planとの整合を確認。修正・新分析・実行は自動化しない |
+| `preempt` | 途中状態の保存、互換性、重複しない再開、合成の停止確認を設計。実機試験・投入・取消しの許可を与えない |
 | `biopython` | 配列やFASTAなどの生物情報ファイル、NCBI/PubMedを扱う |
 | `experimental-design` | 比較、割付、交絡、反復など、データ収集前の実験設計を考える |
 | `exploratory-data-analysis` | 対応形式のデータを範囲を限定して調べ、欠損や分布を確認する |
@@ -82,6 +108,20 @@ manifestの`mode`はGitが保持する実行属性を`0644`／`0755`で表しま
 | `yomiyasu` | AIが書いた日本語を、意味と条件を保って推敲する |
 
 依存パッケージ、対応形式、外部サービスの条件は個別に確認し、コピー先でもライセンスと出典を残します。
+
+## 必要な部分を取り込むひな形
+
+| ひな形 | 用途 |
+|---|---|
+| [project-AGENTS.md](templates/project-AGENTS.md) | 既存AGENTS.mdへ追加する短い入口と、本人・repoごとに決める条件 |
+| [project-CLAUDE.md](templates/project-CLAUDE.md) | AGENTS.mdへつなぐClaude向けの短い入口 |
+| [experiment-plan.md](templates/experiment-plan.md) | 15分野の条件、review、Issue・承認対象、実行状況を分けた未承認の草案 |
+| [experiment-plan.yml](templates/experiment-plan.yml) | 対象研究repoへ導入するIssue Form |
+| [result-summary.md](templates/result-summary.md) | 全variant・失敗・欠損、図の確認、根拠と限界を記録する欄 |
+| [storage-policy.md](templates/storage-policy.md) | 出力種類・集約単位・checkpoint・保持枠・整理の承認を決める欄 |
+| [remote-handoff.md](templates/remote-handoff.md) | 別計算機への承認、互換性、分担、identity、回収照合の確認欄 |
+
+必要な欄だけを既存plan・指示・正本bundleへ統合し、毎回全templateを別ファイルにしません。未記入のひな形をそのまま導入済み設定・実験承認・review済み結果にしないでください。保存容量、保持期間、実行命令や科学的条件の既定値は用意していません。
 
 ## GitHubで実験を管理し、結果を残す
 
@@ -144,6 +184,8 @@ python3 -I -S "$BUNDLE/tools/inspect_outputs.py" --repo /対象repo --json
 ## 自分の設定に取り入れる
 
 `rules/RULES.md`を読み、管理者と既存ルールとの整合を確認します。ルールの担当を一つに決め、厳しい承認条件や人間だけが行う操作を保ちます。
+
+Git運用を採用する場合は`rules/git.md`と`skills/git-workflow/SKILL.md`も読みます。既存のAGENTS.md／CLAUDE.mdには、clone先の絶対パスで必要なrulesを参照する記述を追記します。rules内のリンク先を読めるようcloneを残し、同名skill・設定を上書きしません。本人用に対応したGit helperや承認ゲートがないときは、この文書だけで実装済みとは扱いません。
 
 Codexの既存`AGENTS.md`、Claudeの既存`CLAUDE.md`へ、導入先の`rules/RULES.md`を読む参照を追記します。全体を置き換えないでください。指示の追加だけでは実行制限を実装できません。
 
@@ -208,9 +250,9 @@ python3 "$BUNDLE/hooks/invocation_counts.py" report --json
 
 ## 出典と検証範囲
 
-元の実装は `YoheiOhto/env` のcommit `d0806dd69afbed63f99a56eea377ca421c7022bc` から、第三者向けに選択済みのファイルだけを切り出しました。この元commitは来歴であり、このrepoの単体利用に元envの取得は不要です。元envの全設定や過去の履歴の公開可否を保証するものでもありません。
+元の実装は `YoheiOhto/env` のcommit `d0806dd69afbed63f99a56eea377ca421c7022bc` から、第三者向けに選択済みのファイルを切り出しました。同commitのGit・既存探索・研究review・再開のskillも水野班向けに調整し、Git rules・運用案内・ひな形を追加しています。この元commitは来歴であり、本kitの単体ツール・skillの利用に元envの取得は不要です。env固有のhelper・通知・実行ゲートには別途導入が必要で、元envの全設定や過去の履歴の公開可否も保証しません。
 
-外部由来の8 skillは原本を改変せず、各LICENSE・SOURCE.jsonと固定revision・ハッシュを保持しています。自作research-workflowと点検・計測コードの条件はrootのLICENSEを参照してください。yomiyasuのUnicode関連の告知も同梱します。
+外部由来の8 skillは原本を改変せず、各LICENSE・SOURCE.jsonと固定revision・ハッシュを保持しています。自作の5つの運用skill、ひな形、点検・計測コードの条件はrootのLICENSEを参照してください。yomiyasuのUnicode関連の告知も同梱します。
 
 同梱テストは、配布物の整合、Python構文、静的点検の非実行性、環境・出力の点検、計測の任意有効化などを小さい合成入力で確認します。実機のagent起動・認証・skillのnativeイベント・外部サービス・GPU・scheduler・実研究の正しさを保証しません。
 

@@ -10,6 +10,10 @@ Continue authorized, reversible local work and proportionate checks without repe
 
 Never expose credentials. Obtain scoped approval before deleting or overwriting data or results, transferring real data, submitting or cancelling jobs, installing dependencies, changing a shared environment, publishing, or performing remote mutations. Respect human-only actions, protected branches, holds and stop requests. Approval for one target or operation does not authorize another.
 
+## Git and collaboration
+
+When adopting this kit's Git workflow, read [the Git rules](git.md) before branch, commit, PR or organization-promotion operations and use the `git-workflow` skill. It distinguishes work branches, personal PRs, organization stages and explicit approval for each PR merge. Do not apply Ohto's account, organization staging branch or helper permissions to another member. The helper implementation is not bundled; missing or incompatible tooling does not permit bypassing the receiving project's controls.
+
 ## Research and execution
 
 For experiment planning, GitHub Issue tracking, result bundles and requested experiment HTML, use the shared `research-workflow` skill. It describes plan/version/Issue links, reviewed PNG/SVG and output locations; it does not install execution gates or authorize external writes.

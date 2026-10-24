@@ -1,0 +1,118 @@
+{
+  "name": "実験計画の相談・レビュー",
+  "description": "対象研究repoの固定版plan、未確定事項、実装・実行の範囲を確認する",
+  "title": "[実験計画] ",
+  "body": [
+    {
+      "type": "markdown",
+      "attributes": {
+        "value": "このフォームは対象研究repoへ導入して使います。相談 → 固定したplan → 同版をIssueへ反映 → 人の明示承認 → 実装・review → 実行。Issue作成・label・AIの記入は実行承認ではありません。"
+      }
+    },
+    {
+      "type": "input",
+      "id": "plan_version",
+      "attributes": {
+        "label": "実験ID・planの固定版",
+        "description": "planの場所、対象版を識別するcommitまたはdigestを記入します。受入先の識別方法を使い、未導入のtoolを前提にしません。"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "question",
+      "attributes": {
+        "label": "目的・比較・判定基準",
+        "description": "研究目的、仮説検証／探索、baseline、支持・棄却・不明の基準、行わないことを記入します。"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "conditions",
+      "attributes": {
+        "label": "承認対象planの全文または固定版へのリンク",
+        "description": "入力identity・対象・標本数の根拠、split・leakage防止、前処理、model・tokenizer・prompt、全設定、seed・反復・variantとtask数、評価・分母・欠損／失敗・不確実性を含めます。科学的条件を不明のまま既定値で埋めません。"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "resources",
+      "attributes": {
+        "label": "実行先・資源・利用上限・期限",
+        "description": "profile・cluster・account、CPU/RAM/GPU・walltime、依存・container、実行期限、APIやMiyabi等の適用上限と残量、並列・retryを記入します。見積もりと厳守上限を分け、他の利用者の個人予算例外を流用しません。"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "outputs",
+      "attributes": {
+        "label": "保存・再開・成果物",
+        "description": "outputs/logs/checkpoints/reportsの場所、来歴、保持対象と容量枠、再開の同一性条件、結果表・PNG/SVG・確認記録を記入します。未決定の削除・保持方針を作りません。"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "execution_scope",
+      "attributes": {
+        "label": "実装・実行の承認を求める範囲",
+        "description": "編集対象、正確な実行命令、許可するretry/resume・条件を保つ修正、停止条件と別途承認が必要な操作を明記します。フォームは実行ゲートや承認記録を生成しません。"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "review",
+      "attributes": {
+        "label": "確認した根拠と残るrisk",
+        "description": "既存結果へのアクセス、比較の独立性、選定理由、検査結果と実際の設定、まだ人が判断すべきことを記入します。検査合格を人の承認と置き換えません。"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "unresolved",
+      "attributes": {
+        "label": "未確定事項",
+        "description": "残る相談を列挙します。全条件を合意済みの場合だけ「なし」と記入します。未確定の間は実装・実行へ進みません。"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "input",
+      "id": "project",
+      "attributes": {
+        "label": "整理先Project（任意）",
+        "description": "管理者と合意したProject URL・所属状況。認証情報を記入しません。このフォームはProjectへ自動登録しません。"
+      },
+      "validations": {
+        "required": false
+      }
+    },
+    {
+      "type": "markdown",
+      "attributes": {
+        "value": "人の承認は対象plan版と範囲を指定したチャット発言または人のコメントとして記録します。条件変更は旧版を保って相談します。資源だけの調整は受入先の既存方針を確認し、このフォームから許可を作りません。"
+      }
+    }
+  ]
+}

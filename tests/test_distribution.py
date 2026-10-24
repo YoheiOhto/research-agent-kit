@@ -17,12 +17,15 @@ IMPORTED = {
     'biopython', 'experimental-design', 'exploratory-data-analysis', 'gget',
     'scikit-learn', 'statistical-analysis', 'statistical-power', 'yomiyasu',
 }
+FIRST_PARTY = {'research-workflow', 'git-workflow', 'find-existing', 'research-review', 'preempt'}
 
 
 class DistributionTests(unittest.TestCase):
     def test_manifest_inventory_and_bytes(self):
         manifest = json.loads((ROOT / 'MANIFEST.json').read_text())
         expected = manifest['files']
+        self.assertEqual(set(manifest['skills']), {p.name for p in (ROOT / 'skills').iterdir()})
+        self.assertEqual(set(manifest['first_party_skills']), FIRST_PARTY)
         actual = set()
         for directory, names, files in os.walk(ROOT, followlinks=False):
             names[:] = [n for n in names if n not in {'.git', '__pycache__'}]
@@ -51,7 +54,7 @@ class DistributionTests(unittest.TestCase):
                 self.assertEqual(git_mode, record['mode'])
 
     def test_imported_skill_provenance_and_licenses(self):
-        self.assertEqual({p.name for p in (ROOT / 'skills').iterdir()}, IMPORTED | {'research-workflow'})
+        self.assertEqual({p.name for p in (ROOT / 'skills').iterdir()}, IMPORTED | FIRST_PARTY)
         for skill in IMPORTED:
             directory = ROOT / 'skills' / skill
             source = json.loads((directory / 'SOURCE.json').read_text())
@@ -64,10 +67,11 @@ class DistributionTests(unittest.TestCase):
             self.assertRegex(source['revision'], r'^[0-9a-f]{40}$')
 
     def test_first_party_workflow_and_example(self):
-        directory = ROOT / 'skills/research-workflow'
-        self.assertEqual((ROOT / 'LICENSE').read_bytes(), (directory / 'LICENSE').read_bytes())
-        self.assertTrue((directory / 'references/example.md').is_file())
-        self.assertFalse((directory / 'SOURCE.json').exists())
+        for name in FIRST_PARTY:
+            directory = ROOT / 'skills' / name
+            self.assertEqual((ROOT / 'LICENSE').read_bytes(), (directory / 'LICENSE').read_bytes())
+            self.assertFalse((directory / 'SOURCE.json').exists())
+        self.assertTrue((ROOT / 'skills/research-workflow/references/example.md').is_file())
 
     def test_no_personal_runtime_directories(self):
         for name in ('.codex', '.claude', '.gemini', 'agents/profiles', '99-agent', 'data', 'outputs'):
