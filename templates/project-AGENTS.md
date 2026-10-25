@@ -28,6 +28,8 @@ Git作業には`<KIT_DIR>/rules/git.md`と`git-workflow`、研究計画・結果
 
 研究reviewでは導入済みの`research-review`を使い、実際の根拠とfile:lineを示す。長時間処理・再開の設計には導入済みの`preempt`を使う。skillの存在は新しい実行の許可ではない。
 
+画像の作成・編集は導入済みの`visual-assets`で方法と実在toolを選ぶ。HTMLを明示依頼された場合だけ、導入済みの`show-me`と同梱assetを使う。生成画像を実験結果の証拠にせず、保存・実見・来歴と公開範囲を確認する。
+
 ## 記録と出力
 
 結果、判断、実際の検証、残る不明点を先にチャットで伝える。通常の説明用HTML・全文ログ・backup・並行する報告を自動生成しない。既存のplan・Issue・結果bundleを正本とし、未変更の証拠を再利用する。

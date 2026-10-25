@@ -1,6 +1,6 @@
 # research-agent-kit
 
-水野班向けに共有する研究用agent設定です。Git・研究workflow、既存コード探索、研究レビュー、中断・再開の5つの運用skillと8つの専門skill、共通・Git rules、導入・計画・結果のひな形、任意の呼出し回数カウンター、読み取り専用の点検ツールを収録しています。
+水野班向けに共有する研究用agent設定です。Git・研究workflow、既存コード探索、研究レビュー、中断・再開、画像制作、HTML説明の7つの運用skillと8つの専門skill、共通・Git rules、導入・計画・結果・HTMLのひな形、任意の呼出し回数カウンター、読み取り専用の点検ツールを収録しています。
 
 このrepoをGitで取得し、内容を確認して必要な部分だけを導入します。個人用envの履歴・製品別権限設定・接続先・認証情報は持ち込みません。cloneしただけで、agent設定・通知・定期実行が有効になることはありません。
 
@@ -12,6 +12,7 @@
 |---|---|
 | branch・commit・PR・組織への反映 | [Git rules](rules/git.md)、[git-workflow skill](skills/git-workflow/SKILL.md) |
 | 実装前の既存コード探索・研究レビュー・途中再開 | [find-existing](skills/find-existing/SKILL.md)、[research-review](skills/research-review/SKILL.md)、[preempt](skills/preempt/SKILL.md) |
+| 実験図・概念図・生成画像・画像編集・HTML | [visual-assets](skills/visual-assets/SKILL.md)、[show-me](skills/show-me/SKILL.md)、[HTMLデザインひな形](skills/show-me/assets/research-summary.html) |
 | Issue・Project・実験の実行承認 | [運用案内の4章](docs/mizuno-lab.md#4-issueproject実行承認)、[研究workflow](skills/research-workflow/SKILL.md)、[Issue Form](templates/experiment-plan.yml) |
 | local／Slurm／PBS、資源・token・再開 | [運用案内の5章](docs/mizuno-lab.md#5-localslurmpbsと実行時の確認) |
 | outputs・reports・99-agent・HTML | [運用案内の6章](docs/mizuno-lab.md#6-outputsreports短い記録runtime-state) |
@@ -31,6 +32,7 @@ Gitの基本形は、`machine/<host> → work/<task>で編集・検証・commit 
 | 計画とGitHub Issueを対応付ける | 条件を確定したplanと同じ版をIssueへ反映し、その版の実装・実行承認を得る | 手順を収録。Issue自動投稿、実行ゲート、特定のGitHub Projectへの自動登録・認証は含めない |
 | 証拠を一つの結果bundleにつなぐ | run・設定・入力・code commit・失敗や欠損を記録し、未変更のbundleを再利用する | 手順を収録。実験runner・scheduler連携・移設ツールは含めない |
 | 図を作って確認する | 元表・描画コード・来歴とPNG/SVGを保存し、画像を実際に確認する | 手順と合成例。描画環境の自動導入や確認済み記録の自動発行はしない |
+| 画像とHTMLを制作する | 実験プロット・概念図・生成画像を区別し、依頼されたHTMLは自己完結の1枚にする | 画像用・HTML用skillとCSS内蔵ひな形。画像生成backend・API認証・browser・描画libraryは含めない |
 | 保存先と生成量を整理する | 成果はrepoのoutputs、正式報告はreportsを提案し、HTMLは依頼時だけ。集約表を使い、並行する説明ファイルを増やさない | rules・手順と出力点検。固定の99-agentパス、容量の強制制限、自動圧縮・削除は含めない |
 | 点検の負荷を限定する | コード・環境参照・出力を明示範囲と上限付きで調べ、未検査を明示する | Python製の点検ツールを収録。下記の静的入口は対象コード・宣言済みcommandを実行しない |
 | skill・hookの呼出しを数える | 任意有効化し、本文や引数を保存せずSQLiteに集計する | wrapper・observer・集計CLIを収録。Codexのskill計測は未対応 |
@@ -80,9 +82,10 @@ manifestの`mode`はGitが保持する実行属性を`0644`／`0755`で表しま
 |---|---|
 | `rules/RULES.md` | 依頼の範囲、承認、研究条件、証拠の保全、記録を増やしすぎないための原則 |
 | `rules/git.md` | 編集branch、commit・PR・merge、組織反映、agentが行わないGit操作 |
-| `skills/` | Git・研究・探索・review・再開の運用スキル5つと専門スキル8つ。各1コピーと、その参照資料・補助スクリプト |
+| `skills/` | Git・研究・探索・review・再開・画像・HTMLの運用スキル7つと専門スキル8つ。各1コピーと、その参照資料・補助スクリプト |
 | `docs/mizuno-lab.md` | 班向けの導入・運用。Git、Issue／Project、計算環境、保存、Slack、agent設定 |
 | `templates/experiment-plan.yml` | 対象研究repoへ選んで導入する実験計画のIssue Form。実行承認やProject登録は行わない |
+| `skills/show-me/assets/research-summary.html` | CSS内蔵・外部依存なしのHTMLデザインひな形。skillだけをコピーしても一緒に使える配置 |
 | `hooks/usage_hook.py` | 明示的に有効にした呼出しの計測用wrapper・observer |
 | `hooks/invocation_counts.py` | 計測結果の集計・表示 |
 | `tools/static_code_check.py`、`tools/research_code_check.py` | 明示したソース範囲を検査する入口と内部実装。静的入口はプロジェクトの任意コマンドを実行しない |
@@ -98,6 +101,8 @@ manifestの`mode`はGitが保持する実行属性を`0644`／`0755`で表しま
 | `find-existing` | 実装前に既存ライブラリ・類似実験・Example・並行変更を限定探索し、再利用候補を返す |
 | `research-review` | 差分を中心にデータ・分割・指標・再現性・planとの整合を確認。修正・新分析・実行は自動化しない |
 | `preempt` | 途中状態の保存、互換性、重複しない再開、合成の停止確認を設計。実機試験・投入・取消しの許可を与えない |
+| `visual-assets` | 科学的プロット・概念図・生成画像を選び分け、実在toolでの生成・編集、保持条件・透明度・保存・確認を扱う |
+| `show-me` | 明示依頼されたHTMLを作る。結論・比較・確認済みの図・根拠・限界をまとめ、自己完結・表示確認・保存範囲を扱う |
 | `biopython` | 配列やFASTAなどの生物情報ファイル、NCBI/PubMedを扱う |
 | `experimental-design` | 比較、割付、交絡、反復など、データ収集前の実験設計を考える |
 | `exploratory-data-analysis` | 対応形式のデータを範囲を限定して調べ、欠損や分布を確認する |
@@ -120,8 +125,19 @@ manifestの`mode`はGitが保持する実行属性を`0644`／`0755`で表しま
 | [result-summary.md](templates/result-summary.md) | 全variant・失敗・欠損、図の確認、根拠と限界を記録する欄 |
 | [storage-policy.md](templates/storage-policy.md) | 出力種類・集約単位・checkpoint・保持枠・整理の承認を決める欄 |
 | [remote-handoff.md](templates/remote-handoff.md) | 別計算機への承認、互換性、分担、identity、回収照合の確認欄 |
+| [research-summary.html](skills/show-me/assets/research-summary.html) | 明暗テーマ・狭い画面・印刷向けCSS、draft表示、結果表・図・根拠・用語欄を持つ自己完結HTML |
 
 必要な欄だけを既存plan・指示・正本bundleへ統合し、毎回全templateを別ファイルにしません。未記入のひな形をそのまま導入済み設定・実験承認・review済み結果にしないでください。保存容量、保持期間、実行命令や科学的条件の既定値は用意していません。
+
+## 図・画像とHTMLを作る
+
+`visual-assets`は、実験の数値プロットを元表と描画codeから作る方法、説明用の概念図、生成AIによる一般画像・編集を区別します。実際に利用できるtoolを確認し、元画像・保持条件・透明度・最終保存先・来歴を扱います。特定の画像model、API、料金、認証や自動保存先を配布するものではありません。
+
+`show-me`はHTMLを明示依頼された場合に使います。同梱の`assets/research-summary.html`を合意した保存先へ取り込み、結論・比較・表・確認済みの図・根拠・限界を埋めます。CSSは内蔵、fontはsystem font、画像は確認済みdata URIとし、CDN・外部読込み・JavaScriptなしで使えます。説明用の生成画像を、実測や科学的な証拠に置き換えません。
+
+HTMLひな形自体は正式な配布物としてこのrepoに収録します。実際の説明ページの保存・公開範囲は受入先で合意し、`99-agent`やrepo内を全員の既定値にしません。ページの作成は外部公開・Slack送信の承認ではありません。未記入・未確認は画面にもdraftとして示し、元表・画像・描画code・来歴は正本に残します。
+
+HTMLの構造・リンク・外部依存とCSSの文字contrastは検査しています。初回作成環境ではFirefoxがSnapのホームディレクトリ制約で起動できず、browserでの見た目・印刷は未確認です。導入先で実表示を確認し、構文検査だけを目視確認済みと報告しないでください。画像生成サービスへの接続・生成も、この配布物の検査では実行していません。
 
 ## GitHubで実験を管理し、結果を残す
 
@@ -252,7 +268,7 @@ python3 "$BUNDLE/hooks/invocation_counts.py" report --json
 
 元の実装は `YoheiOhto/env` のcommit `d0806dd69afbed63f99a56eea377ca421c7022bc` から、第三者向けに選択済みのファイルを切り出しました。同commitのGit・既存探索・研究review・再開のskillも水野班向けに調整し、Git rules・運用案内・ひな形を追加しています。この元commitは来歴であり、本kitの単体ツール・skillの利用に元envの取得は不要です。env固有のhelper・通知・実行ゲートには別途導入が必要で、元envの全設定や過去の履歴の公開可否も保証しません。
 
-外部由来の8 skillは原本を改変せず、各LICENSE・SOURCE.jsonと固定revision・ハッシュを保持しています。自作の5つの運用skill、ひな形、点検・計測コードの条件はrootのLICENSEを参照してください。yomiyasuのUnicode関連の告知も同梱します。
+外部由来の8 skillは原本を改変せず、各LICENSE・SOURCE.jsonと固定revision・ハッシュを保持しています。自作の7つの運用skill、ひな形、点検・計測コードの条件はrootのLICENSEを参照してください。画像用skillは本repoの独自手順で、OpenAI system skillの原文・SDK・CLIを再配布していません。yomiyasuのUnicode関連の告知も同梱します。
 
 同梱テストは、配布物の整合、Python構文、静的点検の非実行性、環境・出力の点検、計測の任意有効化などを小さい合成入力で確認します。実機のagent起動・認証・skillのnativeイベント・外部サービス・GPU・scheduler・実研究の正しさを保証しません。
 

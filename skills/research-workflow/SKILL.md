@@ -38,6 +38,8 @@ Preserve the run/variant table, metrics, failed and missing cases, relevant logs
 
 ## Make and inspect result figures
 
+When installed, use `visual-assets` to choose between scientific plots, explanatory diagrams and generated illustrations. It does not install plotting or image-generation backends and does not authorize new analysis.
+
 Use validated saved results and the approved aggregation. Label units, denominators, comparisons, coverage and uncertainty. Keep failed, missing, ambiguous and unjudged cases visible; do not selectively drop them or generalize an incomplete sample. A request to plot saved results does not authorize new scientific comparisons or model calls.
 
 Preserve source tables, plotting code, effective plot settings and provenance alongside the figures. Export a PNG preview and SVG when vector output suits the figure and the available tool supports it. For raster-heavy or unsupported content, state the limitation; an SVG container does not make embedded pixels vector data. Do not claim a plotting package or exporter is installed without checking, or install it without the project's authorization.
@@ -49,3 +51,5 @@ Actually open and inspect the generated images before adopting the conclusion or
 Answer in chat by default: purpose, comparison, usable results, limitations and next decision, with links to the canonical Issue, plan and bundle. State actual checks and distinguish measurements from estimates.
 
 Create HTML only after an explicit request. Agree an artifact destination with the receiving user; do not assume a personal home path or place explanatory pages in the project by default. Make the requested page self-contained, embedding reviewed plots and essential context. Preserve the original PNG/SVG, source tables, code and provenance in the result bundle. HTML does not replace that evidence or authorize new analyses. Reuse the agreed page/bundle when unchanged instead of generating another report for every interaction.
+
+When installed, use `show-me` and its bundled HTML asset for the requested page. The distributable template is repository content; the resulting explanatory page follows the receiving user's agreed artifact destination and publication boundary.

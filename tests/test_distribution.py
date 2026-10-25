@@ -3,9 +3,11 @@ from __future__ import annotations
 
 import ast
 import hashlib
+from html.parser import HTMLParser
 import json
 import os
 from pathlib import Path
+import re
 import stat
 import subprocess
 import sys
@@ -17,7 +19,28 @@ IMPORTED = {
     'biopython', 'experimental-design', 'exploratory-data-analysis', 'gget',
     'scikit-learn', 'statistical-analysis', 'statistical-power', 'yomiyasu',
 }
-FIRST_PARTY = {'research-workflow', 'git-workflow', 'find-existing', 'research-review', 'preempt'}
+FIRST_PARTY = {'research-workflow', 'git-workflow', 'find-existing', 'research-review', 'preempt',
+               'show-me', 'visual-assets'}
+
+
+class TemplateDocument(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.elements = []
+        self.styles = []
+        self.in_style = False
+
+    def handle_starttag(self, tag, attrs):
+        self.elements.append((tag, dict(attrs)))
+        self.in_style = self.in_style or tag == 'style'
+
+    def handle_endtag(self, tag):
+        if tag == 'style':
+            self.in_style = False
+
+    def handle_data(self, data):
+        if self.in_style:
+            self.styles.append(data)
 
 
 class DistributionTests(unittest.TestCase):
@@ -83,6 +106,42 @@ class DistributionTests(unittest.TestCase):
                 continue
             with self.subTest(path=str(path.relative_to(ROOT))):
                 ast.parse(path.read_bytes(), filename=str(path.relative_to(ROOT)))
+
+    def test_html_template_has_no_active_or_network_dependencies(self):
+        document = TemplateDocument()
+        document.feed((ROOT / 'skills/show-me/assets/research-summary.html').read_text())
+        forbidden = {'script', 'link', 'iframe', 'frame', 'object', 'embed', 'form', 'base', 'foreignobject'}
+        for tag, attrs in document.elements:
+            with self.subTest(tag=tag):
+                self.assertNotIn(tag, forbidden)
+                self.assertFalse(any(name.lower().startswith('on') for name in attrs))
+                self.assertNotEqual(attrs.get('http-equiv', '').lower(), 'refresh')
+                self.assertNotIn('srcset', attrs)
+                for name in ('src', 'poster', 'data', 'background'):
+                    if name in attrs:
+                        self.assertTrue(attrs[name].startswith('data:'), (tag, name))
+                for name in ('href', 'xlink:href'):
+                    if name in attrs:
+                        allowed = ('#', 'https://', 'http://') if tag == 'a' else ('#', 'data:')
+                        self.assertTrue(attrs[name].startswith(allowed), (tag, name))
+        css = '\n'.join(document.styles) + '\n'.join(a.get('style', '') for _, a in document.elements)
+        self.assertIsNone(re.search(r'@import|url\s*\(', css, re.I))
+
+    def test_html_template_landmarks_and_local_links(self):
+        document = TemplateDocument()
+        document.feed((ROOT / 'skills/show-me/assets/research-summary.html').read_text())
+        tags = [tag for tag, _ in document.elements]
+        self.assertEqual(tags.count('main'), 1)
+        self.assertEqual(tags.count('h1'), 1)
+        self.assertTrue(any(t == 'html' and a.get('lang') == 'ja' for t, a in document.elements))
+        self.assertTrue(any(t == 'meta' and a.get('name') == 'viewport' for t, a in document.elements))
+        ids = [a['id'] for _, a in document.elements if 'id' in a]
+        self.assertEqual(len(ids), len(set(ids)))
+        for tag, attrs in document.elements:
+            if tag == 'a' and attrs.get('href', '').startswith('#'):
+                self.assertIn(attrs['href'][1:], ids)
+            if tag == 'img':
+                self.assertIn('alt', attrs)
 
 
 class ToolBoundaryTests(unittest.TestCase):

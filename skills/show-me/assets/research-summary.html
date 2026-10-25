@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
+  <title>研究の説明 — 未記入のひな形</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #fbfbfa; --surface: #ffffff; --fill: #f1f1ed; --line: #d9dad2;
+      --fg: #20231e; --muted: #5d6058; --link: #235b96;
+      --warn: #875017; --warn-bg: #fff1df; --info-bg: #eaf2fb;
+      --measure: 880px;
+      --sans: system-ui, -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif;
+      --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #171914; --surface: #20231c; --fill: #292d24; --line: #484d40;
+        --fg: #eceee5; --muted: #b8bdb0; --link: #a2caff;
+        --warn: #f4c88c; --warn-bg: #3b2d19; --info-bg: #1d3043;
+      }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 2rem 1.25rem 4rem; background: var(--bg); color: var(--fg); font: 16px/1.75 var(--sans); }
+    main { max-width: var(--measure); margin: auto; min-width: 0; }
+    h1 { font-size: clamp(1.55rem, 4vw, 2rem); line-height: 1.4; margin: .6rem 0; }
+    h2 { font-size: 1.15rem; line-height: 1.5; margin: 2.4rem 0 .8rem; padding-bottom: .4rem; border-bottom: 1px solid var(--line); }
+    h3 { font-size: 1rem; margin: 0 0 .4rem; }
+    p { margin: .7rem 0; }
+    a { color: var(--link); text-underline-offset: .2em; }
+    a:focus-visible, summary:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; }
+    code { font: .88em var(--mono); background: var(--fill); padding: .12em .3em; border-radius: 4px; overflow-wrap: anywhere; }
+    .status { display: inline-block; padding: .2rem .7rem; border-radius: 5px; color: var(--warn); background: var(--warn-bg); font-size: .85rem; font-weight: 700; }
+    .sub, figcaption { color: var(--muted); font-size: .88rem; }
+    .lead { font-size: 1.08rem; margin: 1.1rem 0; }
+    .notice, .plain, .gloss, details { padding: 1rem 1.15rem; border: 1px solid var(--line); border-radius: 8px; }
+    .notice { background: var(--warn-bg); }
+    .plain { background: var(--info-bg); margin: .8rem 0 1.3rem; }
+    .plain strong { display: block; font-size: .85rem; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
+    .card { padding: 1rem 1.15rem; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); min-width: 0; }
+    .card p { margin: 0; }
+    .table-wrap { overflow-x: auto; max-width: 100%; border: 1px solid var(--line); border-radius: 8px; }
+    table { width: 100%; min-width: 34rem; border-collapse: collapse; font-size: .9rem; }
+    caption { text-align: left; font-weight: 700; padding: .7rem .85rem; background: var(--fill); }
+    th, td { padding: .7rem .85rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { font-weight: 600; background: var(--fill); }
+    tr:last-child td { border-bottom: 0; }
+    figure { margin: 1rem 0; }
+    figure img { display: block; max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; }
+    .placeholder { display: grid; place-items: center; min-height: 12rem; padding: 1.5rem; text-align: center; background: var(--fill); border: 1px dashed var(--muted); border-radius: 8px; }
+    .placeholder span { display: block; }
+    figcaption { margin-top: .6rem; }
+    summary { cursor: pointer; font-weight: 600; }
+    details { background: var(--surface); }
+    .evidence { padding-left: 1.2rem; }
+    .evidence li { margin: .6rem 0; overflow-wrap: anywhere; }
+    .gloss { background: var(--fill); }
+    dl { margin: 0; display: grid; grid-template-columns: minmax(7rem, .3fr) 1fr; gap: .65rem 1rem; }
+    dt { font-weight: 600; }
+    dd { margin: 0; }
+    footer { margin-top: 2rem; color: var(--muted); font-size: .88rem; }
+    @media (max-width: 540px) {
+      body { padding: 1.2rem .9rem 2.5rem; }
+      .grid, dl { grid-template-columns: 1fr; }
+      dd { margin-bottom: .3rem; }
+    }
+    @media print {
+      :root { color-scheme: light; --bg: #ffffff; --surface: #ffffff; --fill: #f1f1ed; --line: #777777; --fg: #111111; --muted: #444444; --link: #111111; --warn: #4a2b00; --warn-bg: #fff1df; --info-bg: #eaf2fb; }
+      body { padding: 0; font-size: 11pt; }
+      main { max-width: none; }
+      .grid { grid-template-columns: 1fr; }
+      .table-wrap { overflow: visible; }
+      table { min-width: 0; table-layout: fixed; }
+      th, td { overflow-wrap: anywhere; }
+      figure, .card, .gloss { break-inside: avoid; }
+      h2 { break-after: avoid; }
+      details > :not(summary) { display: block !important; }
+    }
+  </style>
+</head>
+<body>
+  <main id="main">
+    <header>
+      <span class="status">DRAFT · 未記入・未確認</span>
+      <h1>研究の目的と比較を説明する</h1>
+      <p class="sub">対象：未記入 ／ 対象時点：未記入 ／ 計画・結果の版：未記入</p>
+      <p class="lead">ここに目的と、確認できた結論を数文で書きます。まだ根拠を確認していないため、このひな形から結果を判断できません。</p>
+      <aside class="notice" aria-label="ひな形の状態">
+        これは配布用のデザインひな形です。実験結果・実行承認・図の確認記録ではありません。未記入欄を実際の根拠で埋め、不要な欄は省いてから使います。
+      </aside>
+    </header>
+
+    <section aria-labelledby="purpose">
+      <h2 id="purpose">目的と比べるもの</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>何を確かめるか</h3>
+          <p>研究目的、対象集団、入力の版、どこまでの話かを記入します。</p>
+        </article>
+        <article class="card">
+          <h3>何と何を比べるか</h3>
+          <p>基準となる条件と比較条件、指標の意味、判定基準を記入します。</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="results">
+      <h2 id="results">使える結果と、まだ分からないこと</h2>
+      <div class="table-wrap" role="region" aria-label="結果表。狭い画面では横にスクロールできます" tabindex="0">
+        <table>
+          <caption>全条件・反復の結果を記入する欄（数値は未記入）</caption>
+          <thead><tr><th scope="col">比較条件</th><th scope="col">対象数・分母</th><th scope="col">指標・単位</th><th scope="col">失敗・欠損・未判定</th><th scope="col">確認状態</th></tr></thead>
+          <tbody>
+            <tr><td>基準条件：未記入</td><td>未記入</td><td>未測定</td><td>未確認</td><td>未確認</td></tr>
+            <tr><td>比較条件：未記入</td><td>未記入</td><td>未測定</td><td>未確認</td><td>未確認</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="plain"><strong>この表から何が言えるか</strong>数値と根拠が未記入なので、改善や差の有無は判断できません。実際の対象数・分母・不確実性と、失敗や未判定の扱いを説明します。</p>
+
+      <figure aria-labelledby="figure-caption">
+        <div class="placeholder"><div><strong>図は未挿入・未確認です</strong><span>確認済みPNGまたは適切なSVGをdata URIで埋め込みます。</span></div></div>
+        <!-- 図を実際に確認した後、上のplaceholderを img src="data:..." alt="図の内容の説明" へ置き換えます。 -->
+        <figcaption id="figure-caption">ここに軸・単位・分母・不確実性・欠損・比較条件と、元表・描画コード・確認記録の対応を記入します。</figcaption>
+      </figure>
+      <p class="plain"><strong>図を読むときの注意</strong>説明用の概念図・生成イラストと、実験の数値から作った図を区別します。生成画像や見た目の整った図は、科学的な結果の証拠になりません。</p>
+    </section>
+
+    <section aria-labelledby="limits">
+      <h2 id="limits">限界と次に決めること</h2>
+      <p>未確認の範囲、途中の対象、失敗、計画との差分を記入します。結果整理の依頼だけで新しい実験や解析を始めません。</p>
+      <p>次に人が判断すること：未記入。利用可能な結果と残作業を分け、見積もりには根拠と不確実性を添えます。</p>
+    </section>
+
+    <section aria-labelledby="evidence">
+      <h2 id="evidence">どの根拠につながるか</h2>
+      <details>
+        <summary>計画・実行・図の根拠を確認する</summary>
+        <ul class="evidence">
+          <li>承認対象のplan・Issue・実際の承認への参照：未記入</li>
+          <li>実行code・入力・環境・解決済み設定・run/job：未記入</li>
+          <li>正本の結果bundle・元表・描画code・来歴：未記入</li>
+          <li>実画像を開いた記録・対象ファイルの識別・問題と修正：未確認</li>
+        </ul>
+      </details>
+      <p class="sub"><a href="#results">結果と確認状態へ戻る</a>。出典リンクを追加するときも、本文・画像は外部読込みなしで読める形を保ちます。</p>
+    </section>
+
+    <section aria-labelledby="terms">
+      <h2 id="terms">言葉の説明</h2>
+      <div class="gloss">
+        <dl>
+          <dt>比較条件</dt><dd>同じ問いについて比べる方法や設定。値や変更点を具体的に示します。</dd>
+          <dt>分母</dt><dd>割合を計算するとき、何件を全体としたかという対象数です。</dd>
+          <dt>来歴</dt><dd>どの入力・コード・設定から結果や図ができたかを辿る記録です。</dd>
+          <dt>結果bundle</dt><dd>元表・図・描画コード・来歴・確認記録をまとめた正本の一式です。</dd>
+        </dl>
+      </div>
+    </section>
+    <footer>未記入・未確認の配布用ひな形。ページ作成は公開や外部送信の許可ではありません。</footer>
+  </main>
+</body>
+</html>
